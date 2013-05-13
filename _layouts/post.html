@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row">
+    <div class="span9">
+      <section class="post">
+        <h1 class="page-header">{{ page.title }}</h1>
+        <article class="content">
+          {{ content }}
+        </article>
+      </section>
+
+      <nav class="pagination">
+        <ul>
+          {% if page.next %}
+            <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">&larr; Anterior</a></li>
+          {% else %}
+            <li class="next disabled"><a>&larr; Anterior</a></li>
+          {% endif %}
+          <li><a href="{{ site.archive_path }}">Arquivo</a></li>
+          {% if page.previous %}
+            <li class="prev"><a href="{{ page.previous.url }}" title="{{ page.previous.title }}">Próximo &rarr;</a></li>
+          {% else %}
+            <li class="prev disabled"><a>Próximo &rarr;</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+      
+      {% include comments.html %}
+      
+    </div>
+
+
+    <aside class="span3 sidebar">
+      <h4>Publicado.</h4>
+      <div class="date"><span>{{ page.date | date: " %e de %B de %Y" | replace: 'January', 'Janeiro' | replace: 'February', 'Fevereiro' | replace: 'March', 'Março' | replace: 'April', 'Abril' | replace: 'May', 'Maio' | replace: 'June', 'Junho' | replace: 'July', 'Julho' | replace: 'August', 'Agosto' | replace: 'September', 'Setembro' | replace: 'October', 'Outubro' | replace: 'November', 'Novembro' | replace: 'December', 'Dezembro' }}</span></div>
+      {% unless page.tags == nil or page.tags == empty %}
+        <h4>Tags</h4>
+        <ul class="tag_box">
+        {% for tag in page.tags %} 
+          <li><a href="{{ site.tags_path }}#{{ tag }}">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+        {% endfor %}
+        </ul>
+      {% endunless %} 
+
+      {% unless page.author == nil or page.author == empty  %}
+        <h4>Autor</h4>
+        <p><span>{{ page.author }}</span></p>
+      {% endunless %} 
+
+      {% assign exist = false %}
+      {% for post in site.related_posts %}
+        {% unless exist %}
+          {% assign exist = true %}
+          <h4>Posts relacionados</h4>
+          <ul>
+        {% endunless %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>                     
+      {% endfor %}
+      {% if exist %}
+        </ul>
+      {% endif %}
+    </aside>
+  </div>
+</div>

@@ -1,0 +1,183 @@
+body {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+@media (max-width: 979px){
+  body {
+  padding-top: 0;
+  }
+}
+
+/* ----- NAVBAR ----- */
+.navbar {
+  -webkit-box-shadow: 0 4px 8px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 4px 8px rgba(0,0,0,.15);
+  box-shadow: 0 4px 8px rgba(0,0,0,.15);
+}
+/* ----- I don't liked this padding... ----- */
+@media (max-width: 979px){
+  .navbar-fixed-top .navbar-inner {
+    padding: 0px;
+  }
+}
+.navbar .navbar-inner {
+  background-color: #0054a6;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0054a6), color-stop(1, #004385));
+  background-image: -webkit-linear-gradient(top, #0054a6 0%, #004385 100%);
+  background-image: -moz-linear-gradient(top, #0054a6 0%, #004385 100%);
+  background-image: -o-linear-gradient(top, #0054a6 0%, #004385 100%);
+  background-image: -ms-linear-gradient(top, #0054a6 0%, #004385 100%);
+  border-bottom: 1px solid #003264;
+}
+.navbar .brand {
+  float: left;
+  font-weight: bold;
+  color: #444;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(255,255,255,.2), 1px 1px 30px rgba(255,255,255,.2);
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+.navbar .brand:hover{
+  color: #eee;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.4), 1px 1px 30px rgba(0,0,0,.4);
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.navbar .nav>li>a {
+  color: #ddd;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+.navbar .nav>li>a:hover {
+color: #ddd;
+text-shadow: 2px 2px 3px rgba(0,0,0,1);
+-webkit-transition: all .3s linear;
+-moz-transition: all .3s linear;
+transition: all .3s linear;
+
+background-color: rgb(0, 56, 111);
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(0, 56, 111)), color-stop(1, #004385));
+background-image: -webkit-linear-gradient(top, rgb(0, 56, 111) 0%, #004385 100%);
+background-image: -moz-linear-gradient(top, rgb(0, 56, 111) 0%, #004385 100%);
+background-image: -o-linear-gradient(top, rgb(0, 56, 111) 0%, #004385 100%);
+background-image: -ms-linear-gradient(top, rgb(0, 56, 111) 0%, #004385 100%);
+}
+.navbar .nav>.active>a{
+  color: #ddd;
+  text-shadow: 2px 2px 3px rgba(0,0,0,1);
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+
+  background-color: rgb(0, 56, 111);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(0, 56, 111)), color-stop(1, #004385));
+  background-image: -webkit-linear-gradient(top, rgb(0, 56, 111) 0%, #004385 100%);
+  background-image: -moz-linear-gradient(top, rgb(0, 56, 111) 0%, #004385 100%);
+  background-image: -o-linear-gradient(top, rgb(0, 56, 111) 0%, #004385 100%);
+  background-image: -ms-linear-gradient(top, rgb(0, 56, 111) 0%, #004385 100%);
+}
+
+
+
+.sidebar  h3, .sidebar h4{
+padding: 10px 0px;
+border-bottom: 1px dashed #aaa;
+margin-bottom: 10px;
+line-height: 16px;
+font-size: 16px;
+text-shadow: 0px 1px 0px #fff;
+}
+
+.container > footer {
+  margin-top: 20px;
+}
+.container > footer p {
+  text-align: center; /* center align it with the container */
+}
+
+
+.post {
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(0,0,0,.05);
+  -webkit-border-radius: 4px 4px 4px 4px;
+     -moz-border-radius: 4px 4px 4px 4px;
+          border-radius: 4px 4px 4px 4px;
+  -webkit-box-shadow: 0 4px 8px rgba(0,0,0,.15);
+     -moz-box-shadow: 0 4px 8px rgba(0,0,0,.15);
+          box-shadow: 0 4px 8px rgba(0,0,0,.15);
+}
+
+/* The white background content wrapper */
+.content {
+  background-color: #fff;
+  padding: 20px;
+  border: 0 1px 1px solid #ddd;
+  -webkit-border-radius: 0 0 4px 4px;
+     -moz-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+
+/* Page header tweaks */
+.page-header {
+  border: 1px 1px 0 solid #ddd;
+  border-bottom: 1px dashed #ddd;
+  background-color: #f5f5f5;
+padding: 5px 20px 0px;
+  margin: 0;
+  -webkit-border-radius: 4px 4px 0 0;
+     -moz-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0;
+}
+
+
+.page-header a {
+  color: #0054a6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.topbar .btn {
+  border: 0;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination span.previous, .pagination span.next {
+  margin: 0 10px;
+}
+
+
+.highlight {
+  padding: 10px 0;
+  width: 100%;
+  overflow: scroll;
+}
+.highlight{
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 10px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(0,0,0,.5);
+}
+.highlight pre {
+  background: transparent;
+  margin: 0;
+  border: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer {
+  clear: both;
+  border-top: 1px dashed #ccc;
+  padding-top: 15px;
+  color: #666;
+}

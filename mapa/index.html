@@ -1,0 +1,21 @@
+---
+layout: page
+title: Mapa
+group: nav
+---
+<section  class="post">
+  <h1 class="page-header">{{ page.title }}</h1>
+  <article class="content">
+    <ul>
+      <li><a href="{{ site.baseurl }}">Home</a></li>
+      {% for node in site.pages %}
+        {% if node.title != nil and node.group != 'home' %}
+          <li><a href="{{ node.url | remove:'index.html' }}">{{ node.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      {% unless site.feedburner_url == nill or site.feedburner_url == empty %}
+        <li><a href="{{ site.feedburner_url }}">Feeds RSS</a></li>
+      {% endunless %}
+    </ul>
+  </article>
+</section>

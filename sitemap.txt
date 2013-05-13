@@ -1,0 +1,7 @@
+---
+# Title == empty, it not even will appear in the site's map list
+title : 
+---
+{% for page in site.pages %}
+{{site.url}}{{ page.url | remove:'index.html' }}{% endfor %}{% for post in site.posts %}
+{{site.url}}{{ post.url }}{% endfor %}

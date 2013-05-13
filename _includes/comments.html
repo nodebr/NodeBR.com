@@ -1,0 +1,14 @@
+{% unless site.disqus_id == empty %}
+  <section id="disqus_thread"></section>
+  <script type="text/javascript">
+      {% if site.safe == false %}var disqus_developer = 1;{% endif %}
+      var disqus_shortname = '{{ site.disqus_id }}'; // required: replace example with your forum shortname
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Você precisa abilitar o JavaScript para poder visualizar <a href="http://disqus.com/?ref_noscript" rel="nofollow">os comentários gerados pelo Disqus.</a></noscript>
+{% endunless %}

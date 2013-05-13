@@ -1,0 +1,28 @@
+---
+layout: page
+title: Tags
+group: nav
+---
+<section  class="post">
+  <h1 class="page-header">{{ page.title }}</h1>
+  <article class="content">
+    <ul class="tag_box inline">
+      {% for tag in site.tags %} 
+        <li><a href="{{ site.tags_path }}#{{ tag[0] }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+      {% endfor %}
+    </ul>
+
+    {% for tag in site.tags %} 
+      <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+      <ul>
+        {% for node in tag[1] %}
+          <li><a href="{{ node.url | remove:'index.html' }}">{{ node.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </article>
+</section>
+
+  
+  
+

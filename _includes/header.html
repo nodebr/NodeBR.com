@@ -1,0 +1,25 @@
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <nav  class="container">
+      <a class="brand" href="{{ site.baseurl }}">{{ site.title }}</a>
+      <ul class="nav">
+        {% assign page_url = page.url | remove:'index.html' %}
+        {% if page_url == site.baseurl %}
+        <li class="active"><a href="{{ site.baseurl }}" class="active">Home</a></li>
+        {% else %}
+        <li><a href="{{ site.baseurl }}">Home</a></li>
+        {% endif %}
+        
+        {% for node in site.pages %}
+          {% if node.group == 'nav' %}
+            {% if node.url == page.url %}
+              <li class="active"><a href="{{ node.url | remove:'index.html' }}" class="active">{{ node.title }}</a></li>
+            {% else %}
+              <li><a href="{{ node.url | remove:'index.html' }}">{{ node.title }}</a></li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

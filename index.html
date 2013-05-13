@@ -1,0 +1,57 @@
+---
+layout: page
+title: Comunidade Brasileira de NodeJS - NodeBR
+group: home
+---
+{% for post in paginator.posts %}
+  <section  class="post">
+    <h1 class="page-header"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <article class="content">
+      {{ post.content }}
+    </article>
+  </section >
+{% endfor %}
+
+<nav  class="pagination">
+  <ul class="pages">
+    {% assign base_paginator = site.paginate_path | remove:':num' %}
+    {% if paginator.previous_page %}
+      <li class="prev">
+        {% if paginator.previous_page == 1 %}
+          <a href="{{ site.baseurl }}">&larr; Anterior</a>
+        {% else %}
+          <a href="{{ site.baseurl }}{{ base_paginator }}{{ paginator.previous_page }}/">&larr; Anterior</a>
+        {% endif %}
+      </li>
+    {% else %}
+      <li class="prev disabled"><span>&larr; Anterior</span></li>
+    {% endif %}
+    
+    
+    <li class="page">
+      {% if paginator.page == 1 %}
+        <span class="current-page">1</span>
+      {% else %}
+        <a href="{{ site.baseurl }}">1</a>
+      {% endif %}
+    </li>
+    {% for count in (2..paginator.total_pages) %}
+      <li class="page">
+        {% if count == paginator.page %}
+          <span class="current-page">{{ count }}</span>
+        {% else %}
+          <a href="{{ site.baseurl }}{{ base_paginator }}{{ count }}/">{{ count }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+
+    
+    {% if paginator.next_page %}
+      <li class="next">
+        <a href="{{ site.baseurl }}{{ base_paginator }}{{ paginator.next_page }}/">Próximo &rarr;</a>
+      </li>
+    {% else %}
+      <li class="next disabled"><span>Próximo &rarr;</span></li>
+    {% endif %}
+  </ul>
+</nav>

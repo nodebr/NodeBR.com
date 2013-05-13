@@ -1,0 +1,24 @@
+title : NodeBR
+timezone: America/Sao_Paulo
+
+url: http://nodebr.com
+baseurl: /
+permalink: /:categories/:title/
+tags_path: /tags/
+archive_path: /arquivo/
+map_path: /mapa/
+
+paginate: 2
+paginate_path: 'pagina:num'
+# For better related posts
+lsi: true
+
+author :
+  name : Rafael Henrique Moreira
+  email : rafadev7@gmail.com
+  url : http://rafadev.com/
+
+github_url: http://github.com/nodebr/NodeBR/
+feedburner_url: http://feeds.feedburner.com/NodeBR/
+disqus_id: nodebr
+google_analytics_id: UA-34061866-1
