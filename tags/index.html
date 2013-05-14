@@ -8,7 +8,7 @@ group: nav
   <article class="content">
     <ul class="tag_box inline">
       {% for tag in site.tags %} 
-        <li><a href="{{ site.tags_path }}#{{ tag[0] }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+        <li><a href="{{ site.tags_path }}#{{ tag[0] }}" class="label">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
       {% endfor %}
     </ul>
 

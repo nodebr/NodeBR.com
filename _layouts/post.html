@@ -39,7 +39,7 @@ layout: default
         <h4>Tags</h4>
         <ul class="tag_box">
         {% for tag in page.tags %} 
-          <li><a href="{{ site.tags_path }}#{{ tag }}">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+          <li><a href="{{ site.tags_path }}#{{ tag }}" class="label">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
         {% endfor %}
         </ul>
       {% endunless %} 
