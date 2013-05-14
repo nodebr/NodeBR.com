@@ -196,7 +196,8 @@ padding: 5px 20px 0px;
 .tag_box.inline li {
 	float:left;
 }
-.tag_box .badge{
-	vertical-align:super;
+.tag_box a  span{
+	vertical-align:top;
 	font-size:0.8em;
+  color: #ff0;
 }
