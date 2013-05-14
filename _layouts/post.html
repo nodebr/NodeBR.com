@@ -38,11 +38,8 @@ layout: default
       {% unless page.tags == nil or page.tags == empty %}
         <h4>Tags</h4>
         <ul class="tag_box">
-        {% for tag in page.tags %} 
-          <li><a href="{{ site.tags_path }}#{{ tag }}">
-            <span class="label">{{ tag }}</span>
-            <span class="badge">{{ site.tags[tag].size }}</span>
-          </a></li>
+        {% for tag in page.tags %}
+          <li><a href="{{ site.tags_path }}#{{ tag }}">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
         {% endfor %}
         </ul>
       {% endunless %} 

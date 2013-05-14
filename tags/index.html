@@ -7,11 +7,8 @@ group: nav
   <h1 class="page-header">{{ page.title }}</h1>
   <article class="content">
     <ul class="tag_box inline">
-      {% for tag in site.tags %} 
-        <li><a href="{{ site.tags_path }}#{{ tag[0] }}">
-          <span class="label">{{ tag[0] }}</span>
-          <span class="badge">{{ tag[1].size }}</span>
-        </a></li>
+      {% for tag in site.tags %}
+        <li><a href="{{ site.tags_path }}#{{ tag[0] }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
       {% endfor %}
     </ul>
 
