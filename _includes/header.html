@@ -1,25 +1,48 @@
-<header class="navbar navbar-fixed-top">
+<header class="container">
+<div class="row">
+<div class="span9">
+
+<div class="logo">
+  <a href="{{ site.baseurl }}" class="active">
+    <img src="{{ site.url }}/img/NodeBR-logo.png">
+  </a>
+</div>
+
+
+<nav class="navbar">
   <div class="navbar-inner">
-    <nav  class="container">
-      <a class="brand" href="{{ site.baseurl }}">{{ site.title }}</a>
-      <ul class="nav">
-        {% assign page_url = page.url | remove:'index.html' %}
-        {% if page_url == site.baseurl %}
-        <li class="active"><a href="{{ site.baseurl }}" class="active">Home</a></li>
-        {% else %}
-        <li><a href="{{ site.baseurl }}">Home</a></li>
-        {% endif %}
-        
-        {% for node in site.pages %}
-          {% if node.group == 'nav' %}
-            {% if node.url == page.url %}
-              <li class="active"><a href="{{ node.url | remove:'index.html' }}" class="active">{{ node.title }}</a></li>
-            {% else %}
-              <li><a href="{{ node.url | remove:'index.html' }}">{{ node.title }}</a></li>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
+    
+    <ul class="nav">
+      {% assign page_url = page.url | remove:'index.html' %}
+      {% if page_url == site.baseurl %}
+      <li class="active"><a href="{{ site.baseurl }}" class="active"><i class="icon-home"></i> Home</a></li>
+      {% else %}
+      <li><a href="{{ site.baseurl }}"><i class="icon-home"></i> Home</a></li>
+      {% endif %}
+      
+      
+      {% if page_url == site.archive_path %}
+      <li class="active"><a href="{{ site.archive_path }}" class="active"><i class="icon-folder-open"></i> Arquivo</a></li>
+      {% else %}
+      <li><a href="{{ site.archive_path }}"><i class="icon-folder-open"></i> Arquivo</a></li>
+      {% endif %}
+      
+      {% if page_url == site.tags_path %}
+      <li class="active"><a href="{{ site.tags_path }}" class="active"><i class="icon-tags"></i> Tags</a></li>
+      {% else %}
+      <li><a href="{{ site.tags_path }}"><i class="icon-tags"></i> Tags</a></li>
+      {% endif %}
+      
+      {% if page_url == site.map_path %}
+      <li class="active"><a href="{{ site.map_path }}" class="active"><i class="icon-search"></i> Mapa</a></li>
+      {% else %}
+      <li><a href="{{ site.map_path }}"><i class="icon-search"></i> Mapa</a></li>
+      {% endif %}
+      
+    </ul>
   </div>
+</nav>
+
+</div>
+</div>
 </header>

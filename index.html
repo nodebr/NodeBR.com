@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Comunidade Brasileira de NodeJS - NodeBR
+title: Comunidade Brasileira de Node.JS
 group: home
 ---
 {% for post in paginator.posts %}
@@ -18,13 +18,13 @@ group: home
     {% if paginator.previous_page %}
       <li class="prev">
         {% if paginator.previous_page == 1 %}
-          <a href="{{ site.baseurl }}">&larr; Anterior</a>
+          <a href="{{ site.baseurl }}"><i class="icon-arrow-left"></i> Anterior</a>
         {% else %}
-          <a href="{{ site.baseurl }}{{ base_paginator }}{{ paginator.previous_page }}/">&larr; Anterior</a>
+          <a href="{{ site.baseurl }}{{ base_paginator }}{{ paginator.previous_page }}/"><i class="icon-arrow-left"></i> Anterior</a>
         {% endif %}
       </li>
     {% else %}
-      <li class="prev disabled"><span>&larr; Anterior</span></li>
+      <li class="prev disabled"><span><i class="icon-arrow-left"></i> Anterior</span></li>
     {% endif %}
     
     
@@ -48,10 +48,10 @@ group: home
     
     {% if paginator.next_page %}
       <li class="next">
-        <a href="{{ site.baseurl }}{{ base_paginator }}{{ paginator.next_page }}/">Próximo &rarr;</a>
+        <a href="{{ site.baseurl }}{{ base_paginator }}{{ paginator.next_page }}/">Próximo <i class="icon-arrow-right"></i></a>
       </li>
     {% else %}
-      <li class="next disabled"><span>Próximo &rarr;</span></li>
+      <li class="next disabled"><span>Próximo <i class="icon-arrow-right"></i></span></li>
     {% endif %}
   </ul>
 </nav>

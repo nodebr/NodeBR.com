@@ -14,15 +14,15 @@ layout: default
       <nav class="pagination">
         <ul>
           {% if page.next %}
-            <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">&larr; Anterior</a></li>
+            <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}"><i class="icon-arrow-left"></i> Anterior</a></li>
           {% else %}
-            <li class="next disabled"><a>&larr; Anterior</a></li>
+            <li class="next disabled"><a><i class="icon-arrow-left"></i> Anterior</a></li>
           {% endif %}
-          <li><a href="{{ site.archive_path }}">Arquivo</a></li>
+          <li><a href="{{ site.archive_path }}"><i class="icon-folder-open"></i> Arquivo</a></li>
           {% if page.previous %}
-            <li class="prev"><a href="{{ page.previous.url }}" title="{{ page.previous.title }}">Próximo &rarr;</a></li>
+            <li class="prev"><a href="{{ page.previous.url }}" title="{{ page.previous.title }}">Próximo <i class="icon-arrow-right"></i></a></li>
           {% else %}
-            <li class="prev disabled"><a>Próximo &rarr;</a></li>
+            <li class="prev disabled"><a>Próximo <i class="icon-arrow-right"></i></a></li>
           {% endif %}
         </ul>
       </nav>
@@ -33,10 +33,11 @@ layout: default
 
 
     <aside class="span3 sidebar">
-      <h4>Publicado.</h4>
+      <h3><i class="icon-time"></i> Publicado em</h3>
       <div class="date"><span>{{ page.date | date: " %e de %B de %Y" | replace: 'January', 'Janeiro' | replace: 'February', 'Fevereiro' | replace: 'March', 'Março' | replace: 'April', 'Abril' | replace: 'May', 'Maio' | replace: 'June', 'Junho' | replace: 'July', 'Julho' | replace: 'August', 'Agosto' | replace: 'September', 'Setembro' | replace: 'October', 'Outubro' | replace: 'November', 'Novembro' | replace: 'December', 'Dezembro' }}</span></div>
+      
       {% unless page.tags == nil or page.tags == empty %}
-        <h4>Tags</h4>
+        <h3><i class="icon-tags"></i> Tags</h3>
         <ul class="tag_box">
         {% for tag in page.tags %}
           <li><a href="{{ site.tags_path }}#{{ tag }}" class="label">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
@@ -45,7 +46,7 @@ layout: default
       {% endunless %} 
 
       {% unless page.author == nil or page.author == empty  %}
-        <h4>Autor</h4>
+        <h4><i class="icon-user"></i> Autor</h4>
         <p><span>{{ page.author }}</span></p>
       {% endunless %} 
 
@@ -53,7 +54,7 @@ layout: default
       {% for post in site.related_posts %}
         {% unless exist %}
           {% assign exist = true %}
-          <h4>Posts relacionados</h4>
+          <h4><i class="icon-thumbs-up"></i> Posts relacionados</h4>
           <ul>
         {% endunless %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>                     
