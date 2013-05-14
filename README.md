@@ -83,7 +83,7 @@ Caso você quera fazer alguma retificação em algum post, ou até mesmo acresce
 
 ## Licença
 
-Este blog foi criado por Rafael Henrique Moreira sob a licença MIT. O conteúdo dos artigos é de direito autoral de seus respectivos autores.
+Este blog foi criado por Rafael Henrique Moreira sob a licença Creative Commons. O conteúdo dos artigos é de direito autoral de seus respectivos autores.
 
 [node.js]: http://nodejs.org/
 [jekyll]: http://jekyllrb.com/

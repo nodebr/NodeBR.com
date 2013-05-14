@@ -182,6 +182,21 @@ padding: 5px 20px 0px;
   color: #666;
 }
 
+.footer img.cc {
+  display: inline-block;
+  vertical-align: -0.2em;
+  border: none;
+  width:1em;
+  height:1em;
+  opacity:0.4;
+}
+.footer a.cc:hover {
+  text-decoration: none;
+}
+.footer a.cc:hover img.cc {
+  opacity:1;
+}
+
 /* ---------------- tag_box  ----------------- */
 
 .tag_box {
