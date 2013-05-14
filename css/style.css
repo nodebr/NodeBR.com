@@ -1,6 +1,6 @@
 body {
   position: relative;
-  padding-top: 60px;
+  padding-top: 80px;
   padding-bottom: 20px;
 }
 @media (max-width: 979px){
@@ -104,8 +104,7 @@ text-shadow: 0px 1px 0px #fff;
 
 
 .post {
-  margin-bottom: 20px;
-
+  margin-bottom: 60px;
   border: 1px solid rgba(0,0,0,.05);
   -webkit-border-radius: 4px 4px 4px 4px;
      -moz-border-radius: 4px 4px 4px 4px;
@@ -130,7 +129,7 @@ text-shadow: 0px 1px 0px #fff;
   border: 1px 1px 0 solid #ddd;
   border-bottom: 1px dashed #ddd;
   background-color: #f5f5f5;
-padding: 5px 20px 0px;
+  padding: 10px 20px 10px;
   margin: 0;
   -webkit-border-radius: 4px 4px 0 0;
      -moz-border-radius: 4px 4px 0 0;
@@ -149,6 +148,7 @@ padding: 5px 20px 0px;
 
 .pagination {
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .pagination span.previous, .pagination span.next {
