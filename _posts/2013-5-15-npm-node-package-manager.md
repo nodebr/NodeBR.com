@@ -14,7 +14,7 @@ O objetivo desse post é apresentar os principais comandos para você gerenciar 
 
 ## Conhecendo os principais comandos
 
-- <code>npm install nome_do_módulo</code>: instala um módulo no projeto.
+- O código <code>npm install nome_do_módulo</code>: instala um módulo no projeto.
 - <code>npm install nome_do_módulo –save</code>: instala o módulo e adiciona-o na lista de dependências do <code>package.json</code> do projeto.
 - <code>npm list</code>: lista todos os módulos existentes no projeto.
 - <code>npm list -g</code>: lista todos os módulos globais.
