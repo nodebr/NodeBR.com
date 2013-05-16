@@ -2,6 +2,7 @@
 layout: post
 title : Passando função como parâmetro no JavaScript com Node.js
 author: Rafael Henrique Moreira
+description: Antes de tentar entender o funcionamento do Node.js temos que compreender uma característica do JavaScript herdada da programação funcional.
 tags : [conceito]
 ---
 Antes de tentar entender o funcionamento do **Node.js** temos que compreender uma característica do **JavaScript** herdada da programação funcional. No **JavaScript** você pode, por exemplo, passar uma função como parâmetro. Vamos ver alguns exemplos práticos para ver como isso funciona na prática.

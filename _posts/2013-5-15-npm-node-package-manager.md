@@ -1,6 +1,7 @@
 ---
 layout: post
 title : NPM, The Node Package Manager
+description: O objetivo desse post é apresentar os principais comandos para você gerenciar trabalhar com NPM.
 author: Caio Ribeiro Pereira
 tags : [npm, módulos]
 ---

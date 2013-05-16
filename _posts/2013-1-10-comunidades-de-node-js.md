@@ -2,6 +2,7 @@
 layout: post
 title : Comunidades de Node.js
 author: Rafael Henrique Moreira
+description: A comunidade internacional de Node.js mantem uma lista sobre node no Google groups, criada por Urban Hafner em Junho de 2009, onde é postado exemplos, discussões, anúncios entre outros assuntos sobre o Node.js.
 tags : [comunidade]
 ---
 A comunidade internacional de [Node.js][] mantem uma [lista sobre node no Google groups][], criada por Urban Hafner em Junho de 2009, onde é postado exemplos, discussões, anúncios entre outros assuntos sobre o Node.js. Mas se você está com alguma dúvida você primeiro deve visitar a [página wiki do node.js][] e procurar lá, sua dúvida possívelmente já deve ter sido respondida. Estas páginas são em inglês mas são fundamentais para se ter um conhecimento aprofundado do que está ocorrendo de mais recente no mundo **Node**.
