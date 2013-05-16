@@ -1,6 +1,7 @@
 ---
 layout: post
-title : Subindo o node com express e entregando conteúdo dinâmico.
+title : Subindo o node com express e entregando conteúdo dinâmico
+description: Este post vai ensinar como subir um aplicação Node utilizando o Express e também vai explicar um pouco sobre o package.json que guarda metadados do nosso projeto.
 author: Onezino Gabriel Moreira
 tags : [http, express, exemplo]
 ---

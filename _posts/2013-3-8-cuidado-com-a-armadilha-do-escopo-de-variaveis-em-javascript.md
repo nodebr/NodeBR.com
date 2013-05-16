@@ -1,6 +1,7 @@
 ---
 layout: post
 title : Cuidado com a armadilha do escopo de variáveis em JavaScript
+description: O javascript trabalha com o conceito de contexto de execução, chamando normalmente de contexto. O contexto define o escopo das variáveis ou funções.
 author: Onezino Gabriel Moreira
 tags : [dica]
 ---

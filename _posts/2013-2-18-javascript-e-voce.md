@@ -2,6 +2,7 @@
 layout: post
 title : JavaScript e você
 author: Rafael Henrique Moreira
+description: Antes de começarmos a falar sobre assuntos técnicos, vamos usar este post para falar sobre você e seu relacionamento com o JavaScript.
 tags : [javascript]
 ---
 Antes de começarmos a falar sobre assuntos técnicos, vamos usar este post para falar sobre você e seu relacionamento com o [JavaScript][].

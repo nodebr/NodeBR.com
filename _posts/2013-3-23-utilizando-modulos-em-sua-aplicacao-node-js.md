@@ -1,6 +1,7 @@
 ---
 layout: post
 title : Utilizando módulos em sua aplicação Node.js
+description: Módulos são sub programas que executão tarefas bem definidas. Os módulos do sistema do Node.js têm suas funções documentadas na página da API do Node.
 author: Onezino Gabriel Moreira
 tags : [módulos]
 ---

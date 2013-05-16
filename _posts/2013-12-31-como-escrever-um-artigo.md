@@ -2,6 +2,7 @@
 layout: post
 title : Como escrever um artigo para contribuir com a comunidade
 author: Rafael Henrique Moreira
+description: Descrição do post para ser visualizado pelas redes sociais e otimizado nos mecanismo de buscas.
 tags : [conceito, básico]
 published: false
 ---
