@@ -52,16 +52,16 @@ layout: default
         
         <span class="author-icons">
           {% unless page.author.email == nil or page.author.email == empty %}
-            <a class="author-icon" href="mailto:{{ page.author.email }}"><i class="icon-envelope"></i></a>
+            <a href="mailto:{{ page.author.email }}"><i class="icon-envelope"></i></a>
           {% endunless %} 
           {% unless page.author.url == nil or page.author.url == empty %}
-            <a class="author-icon" href="{{ page.author.url }}"><i class="icon-home"></i></a>
+            <a href="{{ page.author.url }}"><i class="icon-home"></i></a>
           {% endunless %} 
           {% unless page.author.github == nil or page.author.github == empty %}
-            <a class="author-icon" href="https://github.com/{{ page.author.github }}" rel="nofollow"><img src="{{ site.url }}/img/github-icon.png" /></a>
+            <a href="https://github.com/{{ page.author.github }}" rel="nofollow"><img src="{{ site.url }}/img/github-icon.png" /></a>
           {% endunless %} 
           {% unless page.author.twitter == nil or page.author.twitter == empty %}
-            <a class="author-icon" href="https://twitter.com/{{ page.author.twitter }}" rel="nofollow"><img src="{{ site.url }}/img/twitter-icon.png" /></a>
+            <a href="https://twitter.com/{{ page.author.twitter }}" rel="nofollow"><img src="{{ site.url }}/img/twitter-icon.png" /></a>
           {% endunless %} 
         </span>
         
