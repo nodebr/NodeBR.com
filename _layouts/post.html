@@ -47,10 +47,10 @@ layout: default
 
       {% unless page.author == nil or page.author == empty  %}
         <h4><i class="icon-user"></i> Autor</h4>
-        {% unless page.author.name == nil or page.author.name == empty %}
-          <p><span>{{ page.author.name }}</span></p>
-        {% endunless %}
         <p>
+        {% unless page.author.name == nil or page.author.name == empty %}
+          <span>{{ page.author.name }} </span>
+        {% endunless %}
         {% unless page.author.email == nil or page.author.email == empty %}
           <a href="mailto:{{ page.author.email }}"><i class="icon-envelope"></i></a>
         {% endunless %} 
