@@ -97,8 +97,15 @@ h4 {
           box-shadow: 0 4px 8px rgba(0,0,0,.15);
 }
 
-a.author-icon {
-  vertical-align: top;
+.author-icons a img {
+  float: left;
+}
+.author-icons a img {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  vertical-align: text-top;
 }
 
 /* The white background content wrapper */
