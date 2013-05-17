@@ -2,7 +2,12 @@
 layout: post
 title : NPM, The Node Package Manager
 description: O objetivo desse post é apresentar os principais comandos para você gerenciar trabalhar com NPM.
-author: Caio Ribeiro Pereira
+author:
+  name: Caio Ribeiro Pereira
+  email: caio.ribeiro.pereira@gmail.com
+  url: http://www.crpwebdev.com/
+  github: caio-ribeiro-pereira
+  twitter: crp_underground
 tags : [npm, módulos]
 ---
 Olá pessoal! Este é o meu primeiro post aqui na comunidade [NodeBR][], e o assunto hoje será sobre o NPM (Node Package Manager).

@@ -1,8 +1,13 @@
 ---
 layout: post
 title : JavaScript e você
-author: Rafael Henrique Moreira
-description: Antes de começarmos a falar sobre assuntos técnicos, vamos usar este post para falar sobre você e seu relacionamento com o JavaScript.
+description: Antes de falar sobre assuntos técnicos, este post irá falar sobre você e seu relacionamento com o JavaScript.
+author:
+  name: Rafael Henrique Moreira
+  email: rafadev7@gmail.com
+  url: http://rafadev.com/
+  github: rafadev7
+  twitter: rafadev7
 tags : [javascript]
 ---
 Antes de começarmos a falar sobre assuntos técnicos, vamos usar este post para falar sobre você e seu relacionamento com o [JavaScript][].

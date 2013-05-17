@@ -2,7 +2,12 @@
 layout: post
 title : Subindo o node com express e entregando conteúdo dinâmico
 description: Este post vai ensinar como subir um aplicação Node utilizando o Express e também vai explicar um pouco sobre o package.json que guarda metadados do nosso projeto.
-author: Onezino Gabriel Moreira
+author:
+  name: Onezino Gabriel Moreira
+  email: heatdev@gmail.com
+  url: http://www.linkedin.com/pub/onezino-gabriel-moreira/46/979/870
+  github: heat
+  twitter: heat2k4
 tags : [http, express, exemplo]
 ---
 Este post vai ensinar como subir um aplicação [Node][] utilizando o [express][], um framework web para Node, e também vai falar um pouco do <code>package.json</code> que guarda as informações de metadados do nosso projeto.

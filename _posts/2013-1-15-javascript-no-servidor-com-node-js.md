@@ -1,8 +1,13 @@
 ---
 layout: post
 title : JavaScript no servidor com Node.js
-author: Rafael Henrique Moreira
 description: JavaScript é uma linguagem completa: você pode usar isso em muitos contextos e fazer de tudo, com isso você pode alcançar o que as outras linguagens consegue.
+author:
+  name: Rafael Henrique Moreira
+  email: rafadev7@gmail.com
+  url: http://rafadev.com/
+  github: rafadev7
+  twitter: rafadev7
 tags : [conceito, básico]
 ---
 A primeira encarnação do [JavaScript][] viveu no navegador. Mas este é o contexto. Isso define o que você pode fazer com a linguagem, mas isso não fala muito sobre o que a linguagem em si pode fazer. JavaScript é uma linguagem completa: você pode usar isso em muitos contextos e fazer de tudo, com isso você pode alcançar o que as outras linguagens consegue.

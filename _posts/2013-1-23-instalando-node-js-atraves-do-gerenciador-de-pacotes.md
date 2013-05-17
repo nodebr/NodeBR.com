@@ -1,8 +1,13 @@
 ---
 layout: post
 title : Instalando o Node.js através do gerenciador de pacotes
-author: Rafael Henrique Moreira
 description: Este post é um guia prático para a instalação do Node.js através do gerenciador de pacotes.
+author:
+  name: Rafael Henrique Moreira
+  email: rafadev7@gmail.com
+  url: http://rafadev.com/
+  github: rafadev7
+  twitter: rafadev7
 tags : [primeiros passos, básico]
 ---
 Este post é um guia prático para a **instalação do Node.js** através do gerenciador de pacotes.

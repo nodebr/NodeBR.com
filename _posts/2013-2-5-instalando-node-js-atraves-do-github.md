@@ -2,7 +2,12 @@
 layout: post
 title : Instalando Node.js através do GitHub
 description: Este é um post prático que mostra como instalar o Node.js via repositório GitHub.
-author: Rafael Henrique Moreira
+author:
+  name: Rafael Henrique Moreira
+  email: rafadev7@gmail.com
+  url: http://rafadev.com/
+  github: rafadev7
+  twitter: rafadev7
 tags : [primeiros passos, básico]
 ---
 Este é um post prático que mostra como instalar o **Node.js** usando o repositório [Git][] no [GitHub][].

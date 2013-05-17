@@ -1,9 +1,14 @@
 ---
 layout: post
-title : Como escrever um artigo para contribuir com a comunidade
-author: Rafael Henrique Moreira
+title: Como escrever um artigo para contribuir com a comunidade
 description: Descrição do post para ser visualizado pelas redes sociais e otimizado nos mecanismo de buscas.
-tags : [conceito, básico]
+author:
+  name: Rafael Henrique Moreira
+  email: rafadev7@gmail.com
+  url: http://rafadev.com/
+  github: rafadev7
+  twitter: rafadev7
+tags: [conceito, básico]
 published: false
 ---
 

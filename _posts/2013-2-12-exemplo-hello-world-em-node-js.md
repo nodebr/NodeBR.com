@@ -1,8 +1,13 @@
 ---
 layout: post
 title : Exemplo Hello World em Node.js
-author: Rafael Henrique Moreira
 description: Este é um programa rápido para garantir que o Node.js está instalado e funcionando corretamente em sua máquina.
+author:
+  name: Rafael Henrique Moreira
+  email: rafadev7@gmail.com
+  url: http://rafadev.com/
+  github: rafadev7
+  twitter: rafadev7
 tags : [primeiros passos, exemplo, básico]
 ---
 Este é um programa rápido para garantir que tudo está instalado e funcionando corretamente:

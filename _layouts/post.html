@@ -47,7 +47,23 @@ layout: default
 
       {% unless page.author == nil or page.author == empty  %}
         <h4><i class="icon-user"></i> Autor</h4>
-        <p><span>{{ page.author }}</span></p>
+        {% unless page.author.name == nil or page.author.name == empty %}
+          <p><span>{{ page.author.name }}</span></p>
+        {% endunless %}
+        <p>
+        {% unless page.author.email == nil or page.author.email == empty %}
+          <a href="mailto:{{ page.author.email }}"><i class="icon-envelope"></i></a>
+        {% endunless %} 
+        {% unless page.author.url == nil or page.author.url == empty %}
+          <a href="{{ page.author.url }}"><i class="icon-home"></i></a>
+        {% endunless %} 
+        {% unless page.author.github == nil or page.author.github == empty %}
+          <a href="https://github.com/{{ page.author.github }}" rel="nofollow"><img src="{{ site.url }}/img/github-icon.png" /></a>
+        {% endunless %} 
+        {% unless page.author.twitter == nil or page.author.twitter == empty %}
+          <a href="https://twitter.com/{{ page.author.twitter }}" rel="nofollow"><img src="{{ site.url }}/img/twitter-icon.png" /></a>
+        {% endunless %} 
+        </p>
       {% endunless %} 
 
       {% assign exist = false %}
