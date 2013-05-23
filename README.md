@@ -85,7 +85,7 @@ Caso você quera fazer alguma retificação em algum post, ou até mesmo acresce
 
 Este blog foi criado por Rafael Henrique Moreira sob a licença Creative Commons. O conteúdo dos artigos é de direito autoral de seus respectivos autores.
 
-[NodeBR]: http://nodebr.org/
+[NodeBR]: http://nodebr.com/
 [node.js]: http://nodejs.org/
 [jekyll]: http://jekyllrb.com/
 [twitter bootstrap]: http://twitter.github.io/bootstrap
