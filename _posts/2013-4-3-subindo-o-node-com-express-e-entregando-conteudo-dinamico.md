@@ -14,16 +14,18 @@ Este post vai ensinar como subir um aplicação [Node][] utilizando o [express][
 
 Primeiramente crie a estrutura de diretórios, que nos será útil durante o desenvolvimento do aplicativo.
 
-    /
-    /static
-    /static/css
-    /static/css/style.css
-    /static/javascript
-    /static/javascript/app.js
-    /views
-    /views/index.html
-    /package.json
-    /myapp.js
+{% highlight console %}
+/
+/static
+/static/css
+/static/css/style.css
+/static/javascript
+/static/javascript/app.js
+/views
+/views/index.html
+/package.json
+/myapp.js
+{% endhighlight %}
 
 ## Definindo o projeto 'package.json'
 
