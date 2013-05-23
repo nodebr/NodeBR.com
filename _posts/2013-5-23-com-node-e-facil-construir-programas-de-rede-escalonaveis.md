@@ -27,7 +27,7 @@ Node é semelhante em design e foi influenciado por sistemas como a [Máquina de
 
 O protocolo HTTP é de primeira classe em Node. A biblioteca HTTP do Node nasceu das experiências do autor em desenvolvimento e trabalhando com servidores web. Por exemplo, o stream de dados para a maioria dos frameworks web é impossível. O Node tenta corrigir este problema com seu parser HTTP e sua API. Juntamente com a infra-estrutura puramente orientada a eventos de Node, ele faz uma boa base para bibliotecas web ou frameworks.
 
-Mas o que ocorre com a concorrência em múltiplos processadores? Threads não são necessárias para escalonar programas para computadores multi-cores? No Node você pode iniciar um novo processo usando <code>[child_process.fork()][]</code> e este processo vai ser processado em paralelo e para o balanciamento de carga de novas conexões através de múltiplos processos é utilizado o [módulo cluster][].
+Mas o que ocorre com a concorrência em múltiplos processadores? Threads não são necessárias para escalonar programas para computadores multi-cores? No Node você pode iniciar um novo processo usando [child_process.fork()][] e este processo vai ser processado em paralelo e para o balanciamento de carga de novas conexões através de múltiplos processos é utilizado o [módulo cluster][].
 
 
 [The C10K problem]: http://www.kegel.com/c10k.html
