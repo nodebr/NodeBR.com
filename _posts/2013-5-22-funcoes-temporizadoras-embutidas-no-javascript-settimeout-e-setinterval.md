@@ -8,7 +8,7 @@ author:
   url: http://rafadev.com/
   github: rafadev7
   twitter: rafadev7
-tags : []
+tags : [funções]
 ---
 Em JavaScript existem duas funções temporizadoras embutidas (built-in timer functions), <code>setTimeout</code> e <code>setInterval</code> que podem ser usadas para chamar funções de retorno (callback functions) após um determinado tempo. Veja um exemplo de uso abaixo:
 
