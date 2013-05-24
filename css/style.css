@@ -231,7 +231,7 @@ h4 {
   padding-top: 0;
   padding-bottom: 0;
 }
-.highlight>code.console>span.go{
+.highlight>pre>code.console>span.go{
   color: #eee;
   background-color: transparent;
 }

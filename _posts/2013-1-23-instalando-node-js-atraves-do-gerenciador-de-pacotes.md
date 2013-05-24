@@ -61,7 +61,7 @@ sudo zypper in nodejs nodejs-devel
 Atente para a versão do seu openSUSE, caso queira você pode ver as [versões disponíveis no repositório do openSUSE][]. Você pode verificar qual sua versão do openSUSE com o comando:
 
 {% highlight console %}
-# more /etc/SuSE-release
+more /etc/SuSE-release
 SuSE Linux 9.1 (i586)
 VERSION = 9.1
 {% endhighlight %}
