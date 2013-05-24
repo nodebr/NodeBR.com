@@ -35,16 +35,20 @@ No **Ubuntu** você vai os seguir dois passos abaixo para instalar o **Node** at
 
 - Instale todas as dependências:
 
-      sudo apt-get install g++ curl libssl-dev apache2-utils
-      sudo apt-get install git-core
+{% highlight console %}
+sudo apt-get install g++ curl libssl-dev apache2-utils
+sudo apt-get install git-core
+{% endhighlight %}
 
 - Rode os seguintes  comandos:
 
-      git clone git://github.com/ry/node.git
-      cd node
-      ./configure
-      make
-      sudo make install
+{% highlight console %}
+git clone git://github.com/ry/node.git
+cd node
+./configure
+make
+sudo make install
+{% endhighlight %}
 
 ## Windows
 
@@ -53,21 +57,24 @@ Atualmente você deve usar o [cygwin][] para instalar o **Node** no **Windows**.
 - [Instalar cygwin][].
 - Usar o <code>setup.exe</code> na pasta do cygwin para instalar os seguintes pacotes:
 
-      devel → openssl
-      devel → g++-gcc
-      devel → make
-      python → python
-      devel → git
+{% highlight console %}
+devel → openssl
+devel → g++-gcc
+devel → make
+python → python
+devel → git
+{% endhighlight %}
 
 - Abra a linha de comando do cygwin com Start > Cygwin > Cygwin Bash Shell.
 - Rode os comandos abaixo para baixar e construir o Node.
 
-      git clone git://github.com/ry/node.git
-      cd node
-      ./configure
-      make
-      sudo make install
-
+{% highlight console %}
+git clone git://github.com/ry/node.git
+cd node
+./configure
+make
+sudo make install
+{% endhighlight %}
 
 Você pode verificar se a instalação foi bem concluída com um simples [exemplo Hello World em node][]!
 

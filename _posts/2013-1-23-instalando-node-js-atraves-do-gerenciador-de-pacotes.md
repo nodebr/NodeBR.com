@@ -16,53 +16,69 @@ Este post é um guia prático para a **instalação do Node.js** através do ger
 
 Para o **Debian Squeeze**, sua melhor aposta é em compilar o **Node** você mesmo (como root):
 
-    apt-get install make python g++
-    mkdir ~/nodejs && cd $_
-    wget -N http://nodejs.org/dist/node-latest.tar.gz
-    tar xzvf node-latest.tar.gz && cd `ls -rd node-v*`
-    ./configure
-    make install
+{% highlight console %}
+apt-get install make python g++
+mkdir ~/nodejs && cd $_
+wget -N http://nodejs.org/dist/node-latest.tar.gz
+tar xzvf node-latest.tar.gz && cd `ls -rd node-v*`
+./configure
+make install
+{% endhighlight %}
 
 ## Ubuntu
 
 Para instalar o Node no **Ubuntu**, digite as seguintes linhas de comando para instalar a versão estável atual do Node na versão estável atual do Ubuntu:
 
-    sudo apt-get install python-software-properties
-    sudo add-apt-repository ppa:chris-lea/node.js
-    sudo apt-get update
-    sudo apt-get install nodejs npm
+{% highlight console %}
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs npm
+{% endhighlight %}
 
 
 Caso você precise compilar os módulos Node C++:
 
-    sudo apt-get install nodejs-dev
+{% highlight console %}
+sudo apt-get install nodejs-dev
+{% endhighlight %}
 
 
 ## openSUSE
 
 Primeiro adicione o repositório:
 
-    sudo zypper ar http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_11.4/ NodeJSBuildService
+{% highlight console %}
+sudo zypper ar http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_11.4/ NodeJSBuildService
+{% endhighlight %}
 
 Então instale os pacotes:
 
-    sudo zypper in nodejs nodejs-devel
+{% highlight console %}
+sudo zypper in nodejs nodejs-devel
+{% endhighlight %}
 
 Atente para a versão do seu openSUSE, caso queira você pode ver as [versões disponíveis no repositório do openSUSE][]. Você pode verificar qual sua versão do openSUSE com o comando:
 
-    # more /etc/SuSE-release
-    SuSE Linux 9.1 (i586)
-    VERSION = 9.1
+{% highlight console %}
+# more /etc/SuSE-release
+SuSE Linux 9.1 (i586)
+VERSION = 9.1
+{% endhighlight %}
 
 ## Amazon Linux
 
 Primeiro instale o repositório:
 
-    sudo yum localinstall --nogpgcheck http://nodejs.tchol.org/repocfg/amzn1/nodejs-stable-release.noarch.rpm 
+{% highlight console %}
+sudo yum localinstall --nogpgcheck http://nodejs.tchol.org/repocfg/amzn1/nodejs-stable-release.noarch.rpm 
+{% endhighlight %}
 
 Então instale os pacotes:
 
-    sudo yum install nodejs-compat-symlinks npm
+{% highlight console %}
+sudo yum install nodejs-compat-symlinks npm
+{% endhighlight %}
 
 ## Windows
 
@@ -70,11 +86,15 @@ Para usuários **Windows**, você pode simplesmente fazer o [download do instala
 
 Você também pode utilizar o [chocolatey][] para instalar Node no Windows usando o comando:
 
-    cinst nodejs
+{% highlight console %}
+cinst nodejs
+{% endhighlight %}
 
 Ou para fazer uma instalação completa com o gerenciador de pacotes [NPM][] do Node:
 
-    cinst nodejs.install
+{% highlight console %}
+cinst nodejs.install
+{% endhighlight %}
 
 
 Você pode verificar se a instalação foi bem concluída com um simples [exemplo Hello World em Node.js][]!

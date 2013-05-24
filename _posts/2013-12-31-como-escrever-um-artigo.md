@@ -34,15 +34,17 @@ Vivamus aliquam fringilla tellus, tempor vehicula lacus ultrices sed.
 
 Fusce pellentesque eros sit amet leo blandit vitae euismod leo mattis. Nullam placerat euismod eros id pellentesque.
 
-    .
-    |-- convallis.yml
-    |-- elementum
-    |-- urna
-    |   |-- ipsum.html
-    |   |-- suscipit.html
-    |-- non
-    |   |-- non.markdown
-    |   |-- porta.markdown
+{% highlight console %}
+.
+|-- convallis.yml
+|-- elementum
+|-- urna
+|   |-- ipsum.html
+|   |-- suscipit.html
+|-- non
+|   |-- non.markdown
+|   |-- porta.markdown
+{% endhighlight %}
 
 
 - **\convallis.yml**  

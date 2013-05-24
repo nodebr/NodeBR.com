@@ -69,7 +69,7 @@ setInterval(console.log, 1000, "Esta funcao so tem um parametro");
 
 O código acima imprime o seguinte retorno no console:
 
-{% highlight shell-session %}
+{% highlight console %}
 Esta funcao tem 4 parametros
 Esta funcao so tem um parametro
 Esta funcao so tem um parametro
