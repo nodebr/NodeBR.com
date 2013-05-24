@@ -48,7 +48,9 @@ Precisamos criar o arquivo <code>package.json</code> de metadados de informaçõ
 
 As dependências que usamos são o renderizador de template e o framework web **express**. Pra instalar todas as dependências de uma vez é so digitar o comando na raiz do projeto que a ferramenta de pacote de módulos do node ([NPM][]) se encarregará de todo o trabalho:
 
-    npm install
+{% highlight console %}
+npm install
+{% endhighlight %}
 
 ## Escrevendo sua aplicação
 
