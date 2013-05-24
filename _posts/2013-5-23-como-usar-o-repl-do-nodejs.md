@@ -20,7 +20,7 @@ Sempre que você digitar um comando o REPL vai imprimir o valor de retorno do co
 
 Por exemplo:
 
-{% highlight console %}
+{% highlight javascript %}
 node
 > 1+1
 2
@@ -30,7 +30,7 @@ node
 
 Uma coisa importante para observar é onde os valores de retorno do REPL estão interessados:
 
-{% highlight console %}
+{% highlight javascript %}
 > x = 10
 10
 > var y = 5
@@ -40,11 +40,12 @@ Uma coisa importante para observar é onde os valores de retorno do REPL estão 
 5
 {% endhighlight %}
 
-Quando a palavra-chave <code>var</code> é usada o valor da expressão é armazenado, mas NÃO retornado. Quando a palavra-chave <code>var</code> não é usada o valor é armazenado e retornado.
+Quando a palavra-chave <code>var</code> não é usada o valor da expressão é armazenado e retornado.
+Quando a palavra-chave <code>var</code> é usada o valor da expressão é armazenado, mas não retornado.
 
 Se você precisa acessar qualquer módulo embutido, ou qualquer módulo de terceiros, ele pode ser acessado com a função <code>require</code>, assim como é feito num script Node.
 
-{% highlight console %}
+{% highlight javascript %}
 node
 > path = require('path')
 { resolve: [Function],
