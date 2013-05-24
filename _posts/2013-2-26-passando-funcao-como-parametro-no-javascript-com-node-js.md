@@ -48,10 +48,12 @@ E o que são estes <code>undefined</code> no console? Para cada comando dado no 
 
 Nós podemos passar uma função como parâmetro para outra função usando seu nome, como foi visto no exemplo. Após entender este conceito veremos no exemplo a seguir que esta é a maneira indireta de se fazer isso, nós não precisamos definir a função para depois passar ela como parâmetro, nós podemos definir e passar a função como parâmetro para outra função no mesmo lugar.
 
-    function executar(funcao, valor) {
-      funcao(valor);
-    }
-    executar( function(palavra) { console.log(palavra)  }, "Oi JavaScript!");
+{% highlight javascript %}
+function executar(funcao, valor) {
+  funcao(valor);
+}
+executar( function(palavra) { console.log(palavra)  }, "Oi JavaScript!");
+{% endhighlight %}
 
 Neste exemplo nós definimos a função que nós queremos passar para executar no lugar onde a função espera receber seu primeiro parâmetro. Aqui nós não precisamos nem dar um nome à função passada, por isso esta função é chamada de **função anônima**.
 

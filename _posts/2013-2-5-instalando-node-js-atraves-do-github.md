@@ -21,11 +21,13 @@ Caso contrário, siga os passos abaixo:
 - [Instale o Git][]
 - Rode os seguintes comandos em seu prompt de comandos:
 
-      git clone git://github.com/ry/node.git
-      cd node
-      ./configure
-      make
-      sudo make install
+{% highlight %}
+git clone git://github.com/ry/node.git
+cd node
+./configure
+make
+sudo make install
+{% endhighlight %}
 
 ## Ubuntu
 
