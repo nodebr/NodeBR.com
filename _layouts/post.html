@@ -78,7 +78,7 @@ layout: default
         {% unless exist %}
           {% assign exist = true %}
           <h4><i class="icon-thumbs-up"></i> Posts relacionados</h4>
-          <ul>
+          <ul class="related-posts">
         {% endunless %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>                     
       {% endfor %}
