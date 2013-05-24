@@ -8,7 +8,7 @@ tags_path: /tags/
 archive_path: /arquivo/
 map_path: /mapa/
 
-paginate: 2
+paginate: 4
 paginate_path: 'pagina:num'
 # For better related posts
 lsi: true
