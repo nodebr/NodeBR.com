@@ -149,6 +149,12 @@ h4 {
   color: #222;
 }
 
+.pagination ul>li>a.current-page, .pagination ul>li>span.current-page{
+  color: #999;
+  cursor: default;
+  background-color: transparent;
+}
+
 .pagination ul>.disabled>span>i, .pagination ul>.disabled>a>i{
   opacity: 0.7;
 }
