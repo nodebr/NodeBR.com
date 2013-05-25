@@ -1,7 +1,7 @@
 ---
 layout: post
 title : JavaScript no servidor com Node.js
-description: JavaScript é uma linguagem completa: você pode usar isso em muitos contextos e fazer de tudo, com isso você pode alcançar o que as outras linguagens consegue.
+description: O JavaScript você pode usar em muitos contextos e fazer de tudo, com isso você pode alcançar o que as outras linguagens conseguem.
 author:
   name: Rafael Henrique Moreira
   email: rafadev7@gmail.com
