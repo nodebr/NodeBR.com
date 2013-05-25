@@ -1,0 +1,7 @@
+<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=NodeBR', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<p>Digite seu email:</p>
+<p><input type="text" style="width:140px" name="email"/></p>
+<input type="hidden" value="NodeBR" name="uri"/>
+<input type="hidden" name="loc" value="pt_BR"/>
+<input type="submit" value="Assinar" />
+</form>
