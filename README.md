@@ -51,16 +51,17 @@ Todo artigo é um arquivo markdown com alguns meta-dados no topo, seguindo o pad
 
     Fusce pellentesque eros sit amet leo blandit vitae euismod leo mattis. Nullam placerat euismod eros id pellentesque.
     
-        .
-        |-- convallis.yml
-        |-- elementum
-        |-- urna
-        |   |-- ipsum.html
-        |   |-- suscipit.html
-        |-- non
-        |   |-- non.markdown
-        |   |-- porta.markdown
-
+    {% highlight console %}
+    .
+    |-- convallis.yml
+    |-- elementum
+    |-- urna
+    |   |-- ipsum.html
+    |   |-- suscipit.html
+    |-- non
+    |   |-- non.markdown
+    |   |-- porta.markdown
+    {% endhighlight %}
 
     - **\convallis.yml**  
       Fusce pellentesque
@@ -79,6 +80,8 @@ Todo artigo é um arquivo markdown com alguns meta-dados no topo, seguindo o pad
     server.listen(1337, '127.0.0.1');
     {% endhighlight %}
 
+Note que é utilizado tags <code>{% highlight javascript %}</code> e <code>{% endhighlight %}</code> do pygments para destacar o código. O pygments tem uma grande [lista de linguagens suportadas][].
+
 Caso você quera fazer alguma retificação em algum post, ou até mesmo acrescentar informações relevantes, você pode dar fork no projeto e submeter uma requisição de pull com sua modificação, ou se preferir apenas adicionar nos comentários a sua opinião sobre o post.
 
 ## Licença
@@ -94,5 +97,4 @@ Este blog foi criado por Rafael Henrique Moreira sob a licença Creative Commons
 [instalar o jekyll]: http://jekyllrb.com/docs/installation/
 [rodar o jekyll no Windows]: http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html
 [pygments]: http://pygments.org/
-
-
+[lista de linguagens suporta]: http://pygments.org/docs/lexers/
