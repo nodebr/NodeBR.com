@@ -1,7 +1,7 @@
 ---
 layout: post
 title : JavaScript no servidor com Node.js
-description: O JavaScript você pode usar em muitos contextos e fazer de tudo, com isso você pode alcançar o que as outras linguagens conseguem.
+description: O JavaScript você pode usar em muitos contextos e fazer de tudo, com isso você pode alcançar o que as outras linguagens não conseguem.
 author:
   name: Rafael Henrique Moreira
   email: rafadev7@gmail.com
