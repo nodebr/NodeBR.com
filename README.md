@@ -97,4 +97,4 @@ Este blog foi criado por Rafael Henrique Moreira sob a licença Creative Commons
 [instalar o jekyll]: http://jekyllrb.com/docs/installation/
 [rodar o jekyll no Windows]: http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html
 [pygments]: http://pygments.org/
-[lista de linguagens suporta]: http://pygments.org/docs/lexers/
+[lista de linguagens suportadas]: http://pygments.org/docs/lexers/
