@@ -1,4 +1,4 @@
-title : NodeBR
+title : NodeBR - NodeJS Brasil
 timezone: America/Sao_Paulo
 
 url: http://nodebr.com
@@ -8,7 +8,7 @@ tags_path: /tags/
 archive_path: /arquivo/
 map_path: /mapa/
 
-paginate: 4
+paginate: 5
 paginate_path: 'pagina:num'
 # For better related posts
 lsi: true
