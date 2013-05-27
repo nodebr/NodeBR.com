@@ -1,9 +1,9 @@
 <form class=".form-inline" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=NodeBR', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
 <fieldset>
-  <legend><img src="{{ site.url }}/img/rss-feed.png" /> Assine nosso feed:</legend>
-  <label>Receba as notícias por email:</label>
+  <h4><img src="{{ site.url }}/img/rss-feed.png" class="icon-feeds" /> Assine o feed:</h4>
+  <label><small>Receba os novos artigos por email:</small></label>
   <div class="input-append">
-    <input type="email" class="span2 input-small" name="email" placeholder="Digite aqui seu email" required/>
+    <input type="email" class="span2 input-small" name="email" placeholder="seu@email.com.br" required/>
     <input type="submit" value="Assinar" class="btn"/>
   </div>
   <input type="hidden" value="NodeBR" name="uri"/>
