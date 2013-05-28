@@ -5,6 +5,10 @@
   }
 }
 
+body {
+  background-image: url('{{ site.url }}/img/groovepaper.png');
+}
+
 h1 {
   font-size: 31.5px;
 }
@@ -234,9 +238,12 @@ h4 {
   background-color: transparent;
 }
 
-
-/*
-.topbar .btn {
-  border: 0;
+/* ----- ICONS ----- */
+.icon-twitter {
+  background-image: url("/img/icon-twitter.png");
+  background-position: 0 0;
 }
-*/
+.icon-feed {
+  background-image: url("/img/icon-feed.png");
+  background-position: 0 0;
+}
