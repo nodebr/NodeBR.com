@@ -58,10 +58,10 @@ layout: default
             <a href="{{ page.author.url }}"><i class="icon-home"></i></a>
           {% endunless %} 
           {% unless page.author.github == nil or page.author.github == empty %}
-            <a href="https://github.com/{{ page.author.github }}" rel="nofollow"><img src="{{ site.url }}/img/github-icon.png" /></a>
+            <a href="https://github.com/{{ page.author.github }}" rel="nofollow"><i class="icon-github"></i>
           {% endunless %} 
           {% unless page.author.twitter == nil or page.author.twitter == empty %}
-            <a href="https://twitter.com/{{ page.author.twitter }}" rel="nofollow"><img src="{{ site.url }}/img/twitter-icon.png" /></a>
+            <a href="https://twitter.com/{{ page.author.twitter }}" rel="nofollow"><i class="icon-twitter"></i>
           {% endunless %} 
         </span>
         
