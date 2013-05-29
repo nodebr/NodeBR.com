@@ -9,7 +9,6 @@ author:
   github: rafadev7
   twitter: rafadev7
 tags: [primeiros passos, módulos]
-published: false
 ---
 O Node.js segue a [CommonJS][], uma especificação de ecossistemas para o JavaScript, e a função embutida <code>require</code> é a maneira mais fácil de incluir módulos existentes em arquivos separados. O funcionamento básico do <code>require</code> é que ele lê o arquivo JavaScript, avalia o script e em seguida retorna o conteúdo do objeto <code>exports</code>. Segue um exemplo de módulo para melhor compreensão:
 
