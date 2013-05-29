@@ -10,7 +10,7 @@ author:
   twitter: rafadev7
 tags : [conceito, REPL]
 ---
-O Node.js vem com um REPL (Read-Eval-Print Loop), que é um programa simples e interativo que lê expressões ou trechos de programa, avalia (ou executa) e imprime o resultado. Este é o consolo do Node.js e qualquer código JavaScript válido que pode ser escrito em um script pode ser passado para o REPL. Ele pode ser extremamente útil para experimentar o Node.js, debugar códgio, e descobrir alguns dos comportamentos mais excêntricos do JavaScript.
+O Node.js vem com um REPL ([Read-Eval-Print Loop][]), que é um programa simples e interativo que lê expressões ou trechos de programa, avalia (ou executa) e imprime o resultado. Este é o consolo do Node.js e qualquer código JavaScript válido que pode ser escrito em um script pode ser passado para o REPL. Ele pode ser extremamente útil para experimentar o Node.js, debugar códgio, e descobrir alguns dos comportamentos mais excêntricos do JavaScript.
 
 Para rodar é simples, basta rodar o node no console sem inserir um nome de arquivo na frente: <code>node</code>. Lembrando que para rodar um servidor node você teria que passar o arquivo do servidor como parâmetro, por exemplo: <code>node servidor.js</code>.
 
@@ -61,5 +61,30 @@ node
 {% endhighlight %}
 
 Note novamente que sem a palavra-chave <code>var</code>, o conteúdo do objeto é retornado imediatamente e imprimido no <code>stdout</code>.
+
+O node possui alguns módulos embutidos, como o módulo <code>console</code> que contém funções úteis e pode ser usado sem precisar ser importado. Ao se digitar <code>console</code> no REPL do node ele retorna todas as funções públicas deste módulo.
+
+{% highlight javascript %}
+> console
+{ log: [Function],
+  info: [Function],
+  warn: [Function],
+  error: [Function],
+  dir: [Function],
+  time: [Function],
+  timeEnd: [Function],
+  trace: [Function],
+  assert: [Function] }
+{% endhighlight %}
+
+E ao se utilizar a função <code>log</code> deste módulo nós temos:
+
+{% highlight javascript %}
+> console.log("Imprima este texto")
+Imprima este texto
+undefined
+{% endhighlight %}
+
+É interessante observar que o texto foi impresso no console, conforme o esperado, porém a função <code>console.log("Imprima este texto")</code> não tem valor de retorno, e por isso o REPL imprime undefined na linha seguinte. 
 
 [Read-Eval-Print Loop]: http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
