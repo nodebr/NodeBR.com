@@ -1,0 +1,8 @@
+{% unless site.google_analytics_id == empty %}
+  <!-- Google Analytics Head -->
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ site.google_analytics_id }}']);
+  _gaq.push(['_trackPageview']);
+  </script>
+{% endunless %}
