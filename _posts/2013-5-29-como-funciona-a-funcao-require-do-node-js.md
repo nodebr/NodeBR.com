@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como funciona a função require do Node.js
-description: Seguindo a especificação CommonJS para padronização de modulos em JavaScript, a função require é fundamental para o funcionamento do módulos em Node.js
+description: Seguindo a especificação CommonJS para padronização de modulos em JavaScript, a função require é fundamental para o funcionamento correto de módulos em Node.js
 author:
   name: Rafael Henrique Moreira
   email: rafadev7@gmail.com
@@ -10,7 +10,7 @@ author:
   twitter: rafadev7
 tags: [primeiros passos, módulos]
 ---
-O Node.js segue a [CommonJS][], uma especificação de ecossistemas para o JavaScript, e a função embutida <code>require</code> é a maneira mais fácil de incluir módulos existentes em arquivos separados. O funcionamento básico do <code>require</code> é que ele lê o arquivo JavaScript, avalia o script e em seguida retorna o conteúdo do objeto <code>exports</code>. Segue um exemplo de módulo para melhor compreensão:
+O Node.js segue a [CommonJS][], uma especificação de ecossistemas para o JavaScript, e a função embutida <code>require</code> é a maneira mais fácil de incluir módulos existentes em arquivos separados. O funcionamento básico do <code>require</code> é que ele lê o arquivo JavaScript, interpreta o script e em seguida retorna o conteúdo do objeto <code>exports</code>. Segue um exemplo de módulo para melhor compreensão:
 
 {% highlight javascript %}
 console.log("Avaliando o exemplo.js");
@@ -26,7 +26,7 @@ exports.falar = function () {
 }
 {% endhighlight %}
 
-Podemos testar nosso módulo rodando através do [REPL do node][], na pasta onde salvamos nosso projeto <code>exemplo.js</code>, digitando <code>require("./exemplo.js")</code>. Temos a seguinte saída:
+Podemos testar nosso módulo rodando através do [REPL do node][]. Se formos na pasta onde salvamos nosso projeto <code>exemplo.js</code> com o prompt e abrirmos o <code>REPL</code> do node, para isso basta digitar <code>node</code> sem passar nenhum arquivo como parâmetro e ele abrirá em modo <code>REPL</code>, em seguida basta digitar <code>require("./exemplo.js")</code> para importar nosso módulo. Teremos a seguinte saída impressa:
 
 {% highlight javascript %}
 > require("./exemplo.js")
@@ -34,9 +34,9 @@ Avaliando o exemplo.js
 { mensagem: 'Oi', falar: [Function] }
 {% endhighlight %}
 
-Nós vemos que o módulo foi importado com sucesso, e como foi dito a função <code>require</code> primeiro executou o script, imprimindo <code>Avaliando o exemplo.js</code> na primeira linha, e em seguida retornando o conteúdo do objeto <code>exports</code>, que contém apenas dois objetos <code>{ mensagem: 'Oi', falar: [Function] }</code>. A função <code>invisível</code>, como não foi atribuída ao <code>exports</code>, não foi importada.
+Aqui é possível ver que o módulo foi importado com sucesso, e como foi dito a função <code>require</code> primeiro interpretou o script, imprimindo <code>Avaliando o exemplo.js</code> na primeira linha, e em seguida retornando o conteúdo do objeto <code>exports</code>, que contém apenas dois objetos <code>{ mensagem: 'Oi', falar: [Function] }</code>. A função <code>invisivel</code> não foi importada pois não foi atribuída ao objeto <code>exports</code>.
 
-Porém caso quisermos utilizar a função <code>falar</code> de nosso módulo veremos que ela não estará disponível, e a mensagem de erro dirá que <code>falar</code> não está definida neste contexto.
+Porém caso quisermos utilizar a função <code>falar</code> de nosso módulo veremos que ela não estará disponível no contexto global, e a mensagem de erro dirá que <code>falar</code> não está definida.
 
 {% highlight javascript %}
 > falar()
@@ -44,7 +44,7 @@ ReferenceError: falar is not defined
 ...
 {% endhighlight %}
 
-Para que seja possível utilizar as funções importadas de um módulo temos que importá-lo e atribuir o retorno à uma variável. Se rodarmos no `REPL` o código <code>var exemplo = require('./exemplo.js')</code> agora nosso código <code>exemplo.js</code> será avaliado e o objeto <code>exemplo</code> receberá <code>{ mensagem: 'Oi', falar: [Function] }</code>, assim podemos facilmente acessar sua função <code>falar</code>.
+Para que seja possível utilizar as funções importadas de um módulo temos que importá-lo e atribuir o retorno da função <code>require</code> à uma variável. Se rodarmos no `REPL` o código <code>var exemplo = require('./exemplo.js')</code> ocorrerá que agora nosso script <code>exemplo.js</code> será avaliado e o objeto <code>exemplo</code> receberá <code>{ mensagem: 'Oi', falar: [Function] }</code>, que é o retorno da função, assim é possível facilmente acessar sua função <code>falar</code>. Acompanhe o exemplo:
 
 {% highlight javascript %}
 > exemplo = require("./exemplo.js")
@@ -55,7 +55,9 @@ Oi
 undefined
 {% endhighlight %}
 
-Se você quiser atribuir uma função ou um novo objeto para <code>exports</code>, então você terá que usar o objeto <code>module.exports</code>. Veja o exemplo do código <code>exemplo2.js</code>.
+Pode ser que em seu console não apareça a mensagem <code>Avaliando o exemplo.js</code> novamente, você seberá o motivo mais adiante.
+
+Se você quiser atribuir uma função ou um novo objeto para <code>exports</code>, então você terá que usar o objeto <code>module.exports</code>. Veja o exemplo do código <code>exemplo2.js</code> para compreender melhor.
 
 {% highlight javascript %}
 module.exports = function () {
@@ -65,17 +67,17 @@ module.exports = function () {
 require('./exemplo2.js')()
 {% endhighlight %}
 
-Neste exemplo ao importar o módulo com <code>require</code> ele importa e chama a sí próprio e retorna a função atribuida ao <code>exports</code>. Ao importar o módulo temos a saída esperada:
+Neste exemplo ao importar o módulo com <code>require</code>, primeiramente ele interpreta (avalia, executa) o código o que faz o módulo importar e chamar a sí próprio e ao final <code>require</code> retorna a função atribuida ao <code>exports</code>. Ao importar o módulo temos a saída esperada:
 
 {% highlight javascript %}
 > require('./exemplo2.js')
-hello world
+Ola mundo
 [Function]
 {% endhighlight %}
 
-A última linha <code>[Function]</code> confirma que o valor de retorno da chamada <code>require('./exemplo2.js')</code> é uma função.
+A última linha <code>[Function]</code> confirma que o valor de retorno da chamada <code>require('./exemplo2.js')</code> é uma função e a linha <code>Ola mundo</code> confirma que o código foi interpretado antes de ser retornada esta função.
 
-É importante dizer, também, que o código é avaliado apenas na primeira vez que ele é importado, se você importá-lo mais de uma vez a função <code>require</code> irá reutilziar o objeto <code>exports</code> que já está em salvo cache. Para ilustrar este ponto acompanhe o exemplo abaixo:
+É importante dizer, também, que o código é interpretado apenas na primeira vez que ele é importado, se você importá-lo mais de uma vez a função <code>require</code> irá reutilziar o objeto <code>exports</code> que já está em salvo cache. Para ilustrar este ponto acompanhe o exemplo abaixo:
 
 {% highlight javascript %}
 > require("./exemplo.js")
@@ -92,7 +94,7 @@ Ola
 undefined
 {% endhighlight %}
 
-Como pode ser visto no exemplo, <code>exemplo.js</code> é avaliado apenas na primeira vez e todas as chamadas posteriores à <code>require()</code> só invoca o módulo salvo em cache, em vez de ler o arquivo novamente. No exemplo é possível ver que isso pode causar efeitos colaterais caso utilizado indevidamente.
+Como pode ser visto no exemplo, <code>exemplo.js</code> é interpretado apenas na primeira vez e todas as chamadas posteriores à <code>require()</code> só invoca o módulo salvo em cache, em vez de ler o arquivo novamente. No exemplo é possível ver que isso pode causar efeitos colaterais caso utilizado indevidamente.
 
 As regras que o <code>require</code> usa para buscar os arquivos pode ser um pouco complexa, mas uma regra de ouro é que se o arquivo <strong>não</strong> inicia com <code>./</code> ou <code>/</code>, então ele é considerado um módulo do core e o endereço local do Node é verificado, ou uma dependência na pasta local <code>node_modules</code>. Se o arquivo começa com <code>./</code> então ele é considerado um arquivo relativo com o arquivo que chamou o <code>require</code>. Se o arquivo começa com <code>/</code> então ele é considerado pertencente ao endereço absoluto.
 
