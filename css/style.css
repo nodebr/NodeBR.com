@@ -215,7 +215,6 @@ h4 {
 
 
 
-
 /* ----- CODIGO HIGHLIGHT IN POST ----- */
 .highlight{
   padding: 10px 0;
@@ -233,7 +232,7 @@ h4 {
   padding-top: 0;
   padding-bottom: 0;
 }
-.highlight>pre>code.console>span.go{
+.highlight>pre>code.console, .highlight>pre>code.console>span.go, .highlight>pre>code.console>span.gp{
   color: #eee;
   background-color: transparent;
 }
