@@ -28,7 +28,7 @@ $ npm install connect-ensure-login
 
 O exemplo consiste em uma aplicação [Express][] simples, baseada na [aplicação desenvolvida passo a passo][] do artigo anterior, então para melhor acompanhamento se certifique de ter compreendido os conceitos básicos já apresentados.
 
-Passport tem uma arquitetura modular que quebra o mecanismo de autenticação em estratégias (neste caso do Twitter) que são distribuídas separadamente, mantendo o núcleo leve. Também será usado o [connect-ensure-login][] para proteger rotas exclusivas para usuários que logados.
+Passport tem uma arquitetura modular que quebra o mecanismo de autenticação em estratégias (neste caso do Twitter) que são distribuídas separadamente, mantendo o núcleo leve. Também será usado o [connect-ensure-login][] para proteger rotas exclusivas para usuários logados.
 
 
 ## Checklist da autenticação
@@ -90,7 +90,7 @@ passport.use(new TwitterStrategy({
 ));
 {% endhighlight %}
 
-Esta função fornecida para a estratégia é conhecida como "callback de verificação". Callbacks de verificação recebem credenciais como argumentos (neste caso o `token`, `tokenSecret` e `profile`), que são usados para localizar e retornar registros do usuário. A instància `user` retornada vai ser logada e e definida no `request` em `req.user`.
+Esta função fornecida para a estratégia é conhecida como "callback de verificação". Callbacks de verificação recebem credenciais como argumentos (neste caso o `token`, `tokenSecret` e `profile`), que são usados para localizar e retornar registros do usuário. A instància `user` retornada vai ser definida no `request` em `req.user` para identificar o usuário logado.
 
 Na maioria das aplicações, você vai precisar associar a conta do Twitter com um registro do usuário no banco de dados da aplicação. Isso permite, também, você associar outras contas (como as do Facebook) no mesmo usuário, permitindo eles se logarem usando ambos os serviços. Para manter este exemplo simples vai ser utilizado os dados do `profile` diretamente, dispensando o uso de associações com o banco de dados.
 
@@ -108,7 +108,7 @@ Fácil de mais, mas ainda há mais uma coisa a se fazer.
 
 ## Configurando as sessões
 
-A fim de manter o controle do fato do usuário estar logado, uma aplicação precisa implementar suporte para sessões. Faça isso usando o cookie parser e o middleware de sessões embutidos no Express, e inicializando o Passport.
+A fim de manter usuário logado em nosso sistema, uma aplicação precisa implementar suporte para sessões. Faça isso usando o cookie parser e o middleware de sessões embutidos no Express, e inicializando o Passport.
 
 {% highlight javascript %}
 app.use(express.static(__dirname + '/public'));
@@ -142,12 +142,12 @@ $ node app.js
 Seridor Express iniciado na porta 3000
 {% endhighlight %}
 
-E para confirmar que tudo está funcionando você pode acessar o sua aplicação através de seu navegador pelo endereço `http://localhost:3000`.
+E para confirmar que tudo está funcionando você pode acessar a sua aplicação através de seu navegador pelo endereço `http://localhost:3000`.
 
 
 ## Concluindo
 
-Se você seguiu o passo-a-passo agora os usuários podem se logar usando suas contas do Twitter. Se você quiser se aprofundar mais nesta ferramenta consulte o [guia][] e acesse o [repositório][] para mais detalhes de como ela funciona. Agora se você precisa implementar uma API de autenticação, dê uma olhada nos projetos irmãos do Passport: [OAuthorize][] e [OAuth2orize][]
+Se você seguiu o passo-a-passo agora os usuários podem se logar usando suas contas do Twitter. Se você quiser se aprofundar mais nesta ferramenta consulte o [guia][] e acesse o [repositório do github][] para mais detalhes de como ela funciona. Agora se você precisa implementar uma API de autenticação, dê uma olhada nos projetos irmãos do Passport: [OAuthorize][] e [OAuth2orize][]
 
 
 ## O código completo da aplicação
@@ -231,6 +231,6 @@ console.log('Seridor express iniciado na porta %s', server.address().port);
 [OAuth]: http://en.wikipedia.org/wiki/OAuth
 [registrar sua aplicação no Twitter]: https://dev.twitter.com/apps
 [guia]: http://passportjs.org/guide/
-[repositório]: https://github.com/jaredhanson/passport
+[repositório do github]: https://github.com/jaredhanson/passport
 [OAuthorize]: https://github.com/jaredhanson/oauthorize
 [OAuth2orize]: https://github.com/jaredhanson/oauth2orize
