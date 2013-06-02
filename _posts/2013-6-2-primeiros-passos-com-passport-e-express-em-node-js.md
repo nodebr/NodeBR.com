@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Primeiros passos com Passport e express em Node.js
+title: Primeiros passos com Passport e Express em Node.js
 description: Passport é um middleware para Node.js que faz a implementação de autenticação rápida e fácil.
 author:
   name: Rafael Henrique Moreira
@@ -10,9 +10,11 @@ author:
   twitter: rafadev7
 tags: [primeiros passos, módulos, express]
 ---
-[Passport][] é um middleware para Node.js que faz a implementação de autenticação rápida e fácil. Autenticação pode ter uma grande variedade de formas, incluindo usuário e senha, [OpenID][], [OAuth][] e [BrowserID][].
+[Passport][] é um middleware para Node.js que faz a implementação de autenticação em um aplicativo de maneira rápida e fácil. Em aplicações web modernas podem-se ter várias formas de autenticação. Tradicionalmente usuários se logam fornecendo um usuário e uma senha. Com o crescimento das redes socieais, logar-se com um provedor [OAuth][] como o Facebook ou o Twitter tem se tornado métodos populares de autenticação.
 
-Muitos usuários preferem se logar utilizando uma conta existente em uma rede social, como o Facebook ou Twitter. Neste exemplo vai ser implementado o suporte para o usuário se logar com sua conta do Twitter.
+Passport reconhece que cada aplicação tem requisítos únicos de autenticação. Mecanismos de autenticação, conhecidos como estratégias, são empacotados como módulos individuais. As aplicações podem escolher qual estratégia empregar sem criar dependências desnecessárias.
+
+Sabendo que muitos usuários preferem se logar utilizando uma já conta existente em uma rede social, como o Facebook ou Twitter. Neste exemplo vai ser implementado o suporte para o usuário se logar com a sua conta do Twitter.
 
 
 ## Instalando as dependências
@@ -24,7 +26,7 @@ $ npm install passport-twitter
 $ npm install connect-ensure-login
 {% endhighlight %}
 
-O exemplo consiste em uma aplicação [Express][] simples, baseada na [aplicação desenvolvida passo a passo][] do artigo anterior, então para melhor acompanhamento se certifique de ter compreendido os conceitos apresentados.
+O exemplo consiste em uma aplicação [Express][] simples, baseada na [aplicação desenvolvida passo a passo][] do artigo anterior, então para melhor acompanhamento se certifique de ter compreendido os conceitos básicos já apresentados.
 
 Passport tem uma arquitetura modular que quebra o mecanismo de autenticação em estratégias (neste caso do Twitter) que são distribuídas separadamente, mantendo o núcleo leve. Também será usado o [connect-ensure-login][] para proteger rotas exclusivas para usuários que logados.
 
@@ -222,9 +224,7 @@ console.log('Seridor express iniciado na porta %s', server.address().port);
 
 
 [Passport]: http://passportjs.org/
-[OpenID]: http://openid.net/
 [OAuth]: http://oauth.net/
-[BrowserID]: https://developer.mozilla.org/en-US/docs/Persona
 [Express]: http://expressjs.com/
 [aplicação desenvolvida passo a passo]: {% post_url 2013-6-1-primeiros-passos-com-express-em-node-js %}
 [connect-ensure-login]: https://github.com/jaredhanson/connect-ensure-login
