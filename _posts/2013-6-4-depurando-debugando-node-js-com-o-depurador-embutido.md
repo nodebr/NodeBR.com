@@ -20,6 +20,7 @@ O motor V8 da Google, onde o Node roda, vem com um extenso depurador acessível 
 - O motor V8 da Google tem um depurador embutido e o Node tem um cliente para acessar este depurador
 - O depurador pode ser iniciado usando executando o node com o argumento `debug`
 - Na sua aplicação você pode definir pontos de interrupção usando a palavra reservada `debugger`
+- Você pode adicionar vigilantes para acompanhar o valor de expressões durante a depuração
 
 Agora vamos a cada etapa da debugação.
 
@@ -123,19 +124,19 @@ Quando você está depurando internamente o funcionamento deste método, você p
 
 ### Movimentação
 
-- cont, c - Continuar a execução
-- next, n - Próximo passo
-- step, s - Entrar
-- out, o - Sair
-- pause - Pausar a execução de um código (como o botão de pausar nas ferramentas de desenvolvimento)
+- `cont`, `c` - Continuar a execução
+- `next`, `n` - Próximo passo
+- `step`, `s` - Entrar
+- `out`, `o` - Sair
+- `pause` - Pausar a execução de um código (como o botão de pausar nas ferramentas de desenvolvimento)
 
 ### Pontos de interrupção
 
-- setBreakpoint(), sb() - Setar um ponto de interrupção na linha corrente
-- setBreakpoint(line), sb(line) - Setar um ponto de interrupção em uma linha específica
-- setBreakpoint('fn()'), sb(...) - Setar um ponto de interrupção na primeira instrução no corpo da função
-- setBreakpoint('script.js', 1), sb(...) - Setar um ponto de interrupção na primeira linha do script.js
-- clearBreakpoint, cb(...) - Remover um ponto de interrupção
+- `setBreakpoint()`, `sb()` - Setar um ponto de interrupção na linha corrente
+- `setBreakpoint(linha)`, `sb(linha)` - Setar um ponto de interrupção em uma linha específica
+- `setBreakpoint('fn()')`, `sb(...)` - Setar um ponto de interrupção na primeira instrução no corpo da função
+- `setBreakpoint('script.js', 1)`, `sb(...)` - Setar um ponto de interrupção na primeira linha do script.js
+- `clearBreakpoint`, `cb(...)` - Remover um ponto de interrupção
 
 Também é possível inserir um ponto de interrupção em um arquivo (módulo) que ainda não foi carregado, por exemplo usando o comando `setBreakpoint('mod.js', 23)` adiciona um ponto de interrupção no módulo `mod.js` na linha `23`.
 
@@ -164,23 +165,23 @@ debug>
 
 ### Informação
 
-- backtrace, bt - Imprime um registro de chamadas do quadro atual de execução
-- list(5) - Lista o código fonte do script com 5 linhas de contexto (5 linhas antes e 5 depois)
-- watch(expr) - Adiciona uma expressão para a lista vigiada
-- unwatch(expr) - Remove uma expressão da lista vigiada
-- watchers - Lista todos os vigiados e seus valores (atumaticamente listado em cada ponto de interrupção)
-- repl - Abre o REPL de debugação para avaliação no contexto de depuração do script
+- `backtrace`, `bt` - Imprime um registro de chamadas do quadro atual de execução
+- `list(5)` - Lista o código fonte do script com 5 linhas de contexto (5 linhas antes e 5 depois)
+- `watch(expr)` - Adiciona uma expressão para a lista vigiada
+- `unwatch(expr)` - Remove uma expressão da lista vigiada
+- `watchers` - Lista todos os vigiados e seus valores (atumaticamente listado em cada ponto de interrupção)
+- `repl` - Abre o REPL de debugação para avaliação no contexto de depuração do script
 
 ### Controle de execução
 
-- run - Executa o script (é automaticamente executado quando o depurador é iniciado)
-- restart - Reinicia um script
-- kill - Mata um script
+- `run` - Executa o script (é automaticamente executado quando o depurador é iniciado)
+- `restart` - Reinicia um script
+- `kill` - Mata um script
 
 ### Diversos
 
-- scripts - Lista todos os scripts carregados
-- version - Imprime a versão da engine V8
+- `scripts` - Lista todos os scripts carregados
+- `version` - Imprime a versão da engine V8
 
 
 ## Vantagens de uso
