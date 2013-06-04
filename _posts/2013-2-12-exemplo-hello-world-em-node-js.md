@@ -23,8 +23,10 @@ console.log('Server running at http://localhost:8080/');
 
 Rode o código com o comando de linha do Node em seu prompt de comando:
 
-    > node hello_node.js
-    Server running at http://localhost:8080/
+{% highlight console %}
+> node hello_node.js
+Server running at http://localhost:8080/
+{% endhighlight %}
 
 Agora quando você acessar o endereço <code>http://localhost:8080/</code> com seu navegador você ler um caloroso <code>Hello Node.JS</code>!
 
