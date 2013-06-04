@@ -20,16 +20,16 @@ O objetivo desse post é apresentar os principais comandos para você gerenciar 
 
 ## Conhecendo os principais comandos
 
-- O comando <code>npm install nome_do_módulo</code> instala um módulo no projeto.
-- O comando <code>npm install nome_do_módulo –save</code> instala o módulo e adiciona-o na lista de dependências do <code>package.json</code> do projeto.
-- O comando <code>npm list</code> lista todos os módulos existentes no projeto.
-- O comando <code>npm list -g</code> lista todos os módulos globais.
-- O comando <code>npm remove nome_do_módulo</code> desinstala um módulo do projeto.
-- O comando <code>npm update nome_do_módulo</code> atualiza a versão do módulo.
-- O comando <code>npm -v</code> exibe a versão atual do npm.
-- O comando <code>npm adduser nome_do_usuário</code> cria um usuário no site [NPM][] para publicar seu módulo na internet.
-- O comando <code>npm whoami</code> exibe detalhes do seu perfil público do npm (é necessário criar um usuário com o comando anterior).
-- O comando <code>npm publish</code> publica o seu módulo, é necessário ter uma conta ativa no [NPM][].
+- `npm install nome_do_módulo` - instala um módulo no projeto.
+- `npm install nome_do_módulo –save` - instala o módulo e adiciona-o na lista de dependências do <code>package.json</code> do projeto.
+- `npm list` - lista todos os módulos existentes no projeto.
+- `npm list -g` - lista todos os módulos globais.
+- `npm remove nome_do_módulo` - desinstala um módulo do projeto.
+- `npm update nome_do_módulo` - atualiza a versão do módulo.
+- `npm -v` - exibe a versão atual do npm.
+- `npm adduser nome_do_usuário` - cria um usuário no site [NPM][] para publicar seu módulo na internet.
+- `npm whoami` - exibe detalhes do seu perfil público do npm (é necessário criar um usuário com o comando anterior).
+- `npm publish` - publica o seu módulo, é necessário ter uma conta ativa no [NPM][].
 
 [NodeBR]: http://nodebr.com
 [Joyent]: http://joyent.com
