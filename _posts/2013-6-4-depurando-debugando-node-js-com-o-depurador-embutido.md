@@ -105,7 +105,7 @@ debug> list(2)
 Aqui nós podemos ver o contexto da linha corrente que o programa se encontra, então podemos saber aonde o programa encontra-se pausado. O próximo comando a ser avaliado estará marcado com a cor verde, neste exemplo a palavra `debugger` está em verde.
 
 
-## Vigilantes (`Watchers`)
+## Vigilantes (Watchers)
 
 Você pode vigiar o valor de uma expressão ou de uma variável enquanto depura seu código. Em cada ponto de interrupção os vigilantes serão avaliados no contexto atual e seus valores serão impressos logo depois da origem da interrupção.
 
@@ -185,12 +185,13 @@ debug>
 
 ## Vantagens de uso
 
-O depurador da V8 pode ser abilitado e acessado tanto iniciando o Node com o sinalizador (`flag`) de linha de comando `--debug` como sinalizando um processo existente em Node com `SIGUSR1`.
+O depurador da V8 pode ser abilitado e acessado tanto iniciando o Node com o sinalizador (flag) de linha de comando `--debug` como sinalizando um processo existente em Node com `SIGUSR1`.
 
 Uma vez que o processo foi colocado em modo de depuração dessa forma ele pode ser conectado pelo depurador do node. Tanto conectado pelo `pid` quanto pelo URI para o depurador. A sintaxe é:
 
-- node debug -p <pid> - Conecta com o processo via `pid`
-- node debug - conecta com o processo via URI tal como `localhost:5858`
+- `node debug -p <pid>` - Conecta com o processo via `pid`
+
+- `node debug` - conecta com o processo via URI tal como `localhost:5858`
 
 
 [depurador]: http://pt.wikipedia.org/wiki/Depurador
