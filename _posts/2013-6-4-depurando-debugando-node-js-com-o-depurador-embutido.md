@@ -8,32 +8,31 @@ author:
   url: http://rafadev.com/
   github: rafadev7
   twitter: rafadev7
-tags: [intermediário]
-published: false
+tags: [intermediário, depurador]
 ---
-Se a versão HTTP do seu aplicativo funciona, porém a versão de linha de comando não funciona. O que aconteceu de errado? Isso é difícil de falar. A aplicação simplesmente terminou sem imprimir nada. Seus `try`/`catch` e manipuladores de evento não identificaram nenhum erro e a típica abordagem por `console.log()` não imprimiu nada. Então o melhor a se fazer é usar o **[depurador][]** (**debugador**) do Node.js para fazer a [depuração][] do seu código.
+Se a versão web do seu aplicativo está funcionando, porém a versão de linha de comando está dando erro. O que está acontecendo de errado? Pode ser difícil de descobrir. Se a aplicação simplesmente terminou sem imprimir nada. Seus `try`/`catch` e manipuladores de evento não identificaram nenhum erro e a típica abordagem por `console.log()` não imprime nada. Então o melhor a se fazer é usar o **[depurador][]** do Node.js para fazer a [depuração][] do seu código. Uns até falam **debugar** o código, debugar é uma palavra derivada da palavra em Inglês **debugging** (ou simplesmente **debug**).
 
-O motor V8, onde o Node roda, vem com um extenso depurador acessível via protocolo TCP, o Node.js tem um cliente embutido para este depurador, este é considerado o cliente de depuração (depurador) do Node. Este artigo ensina como usar o depurador do Node para depurar seu script. Ele explica como usar o depurador de linha de comando para colocar pontos de interrupção ([breakpoints][]), rodar o [REPL][] do Node no meio da depuração, percorrer pelo código e analizar as saídas do depurador.
+O motor V8 da Google, onde o Node roda, vem com um extenso depurador acessível via protocolo TCP e o Node.js tem um cliente embutido para este depurador. Este é considerado o depurador (cliente de depuração) do Node. Este artigo ensina como usar o depurador do Node para depurar seu script expondo como colocar pontos de interrupção ([breakpoints][]), rodar o [REPL][] do Node no meio da depuração, percorrer pelo código e analizar as saídas do depurador.
 
 
 ## O básico
 
 - O motor V8 da Google tem um depurador embutido e o Node tem um cliente para acessar este depurador
-- Ele pode ser iniciado usando executando o node com o argumento `debug`
-- Na sua aplicação você pode definir pontos de interrupção usando `debugger;`
+- O depurador pode ser iniciado usando executando o node com o argumento `debug`
+- Na sua aplicação você pode definir pontos de interrupção usando a palavra reservada `debugger`
 
 Agora vamos a cada etapa da debugação.
 
 ## Inserindo alguns pontos de interrupção
 
-Um ponto de interrupção (`breakpoint`) é um lugar em seu codigo onde você deseja que sua aplicação pare momentaneamente para que você possa depurar aquele ponto do código. Se você não usar um ponto de interrupção você vai ter percorrer o código passo-a-passo até chegar onde você deseja depurar. E este "código" significa não só o seu código, mas o código do Node.js, assim como o código de cada módulo que você está usando.
+Um ponto de interrupção (breakpoint) é um lugar em seu codigo onde você deseja que sua aplicação pare momentaneamente para que você possa analisar o estado do seu programa naquele ponto do código. Se você não usar um ponto de interrupção você vai ter percorrer o código passo-a-passo até chegar onde você deseja depurar.
 
-No seu script, você vai precisar colocar alguns pontos de interrupção em lugares próximos onde você acha que o problema está ocorrendo. Acompanhe o exemplo `depurar.js` apresentado abaixo.
+Então, basicamente, seu script você vai precisar colocar alguns pontos de interrupção em lugares próximos onde você acha que o seu sistema esteja se comportando de maneira indevida. Acompanhe o exemplo `depurar.js` apresentado abaixo.
 
 {% highlight javascript %}
 x = 5;
 setTimeout(function () {
-  debugger;
+  debugger; // Ponto de interrupcao
   console.log("mundo");
 }, 1000);
 console.log("Ola");
@@ -41,11 +40,11 @@ console.log("Ola");
 
 O ponto de interrupção é adicionado no código usando a palavra reservada `debugger`. Este é um acessório do motor V8, não necessariamente do Node.js.
 
-Você pode setar muitos pontos de interrupção no seu código, se você precisar.
+Você pode setar muitos pontos de interrupção no seu código se você precisar.
 
 ## Iniciando o depurador
 
-Para iniciar o depurador, rode seu script usando o argumento `debug` do node, no nosso exemplo: `node debug depurar.js`. Você vai ser levado ao [REPL][] do depurador `debug >` e então você vai poder usar o comando `help` para ver a lista de comandos disponíveis. Nesta etapa seu código já está pausado na primeira linha, e você precisa usar o comando `cont` para rodar seu código, que irá ser interrompido quando o depurador encontrar a palavra reservada `debugger`.
+Para iniciar o depurador, rode seu script usando o argumento `debug` do node, no nosso exemplo: `node debug depurar.js`. Você vai ser levado ao [REPL][] do depurador `debug >` e então você vai poder usar o comando `help` para ver a lista de comandos disponíveis e começar e debugar seu código. Quando você abre o depurador seu inicia pausado na primeira linha e você precisa usar o comando `cont` para rodar seu código até ser interrompido quando o depurador encontrar a palavra reservada `debugger` ou você usar o comando `pause`.
 
 {% highlight javascript %}
 $ node debug depurar.js
@@ -87,7 +86,7 @@ break in /home/rafadev/git/depurador/depurar.js:5
 debug> quit
 {% endhighlight %}
 
-O comando `repl` permite você avaliar o código remotamente através do REPL do Node. O comando `next` prossegue para a próxima linha. Há também outros comandos disponíveis, você pode digitar `help` para ver a lista de comandos disponíveis.
+O comando `next` avalia a próxima linha do seu código e o comando `repl` permite você avaliar o estado atual do seu programa remotamente através do REPL do Node. Há também outros comandos disponíveis, lembrando que você pode digitar `help` para lembrar dos comandos disponíveis.
 
 
 ## Listagem de código e gerando um rastreamento
@@ -103,14 +102,21 @@ debug> list(2)
   7 }, 1000);
 {% endhighlight %}
 
-Aqui nós podemos ver o contexto da linha corrente que o programa se encontra, então podemos saber aonde, no código, estamos. O comando que você que você está estará marcada em verde, neste exemplo a palavra `debugger` será impressa na cor verde.
+Aqui nós podemos ver o contexto da linha corrente que o programa se encontra, então podemos saber aonde o programa encontra-se pausado. O próximo comando a ser avaliado estará marcado com a cor verde, neste exemplo a palavra `debugger` está em verde.
 
 
 ## Vigilantes (`Watchers`)
 
-Você pode vigiar o valor de uma expressão ou de uma variável enquanto depura seu código. Em cada ponto de interrupção os vigilantes serão avaliados no contexto atual e impressos logo depois da origem da interrupção.
+Você pode vigiar o valor de uma expressão ou de uma variável enquanto depura seu código. Em cada ponto de interrupção os vigilantes serão avaliados no contexto atual e seus valores serão impressos logo depois da origem da interrupção.
 
 Para começar a vigiar uma expressão, insira `watch("sua_expressao")`. O comando `watchers` imprime os vigilantes ativos. Para deixar de vigiar uma expressão, insira `unwatch("sua_expressao")`.
+
+
+## Movimentação com `next`, `step` e `out`
+
+O comando `next`, como já foi dito, prossegue a execução do programa avaliando a linha a atual e pausando na primeira expressão da próxima linha. Caso a linha a ser avaliada faça referência a algum método de outro módulo, ou até mesmo do core, você também pode depurar o funcionamento interno deste método, basta utilizar a função `step` que é o abreviamento para "step into this one" que pode ser traduzido para "entrar neste" que basicamente entra para depurar o método internamente.
+
+Quando você está depurando internamente o funcionamento deste método, você pode ir utilizando os comandos `next` e `step` para rastrear com detalhes o que está ocorrendo "por trás dos panos" depurando até o próprio core do Node, caso você deseje. Já o comando `out` serve para você voltar para o código que chamou aquele método e pausar para a próxima expressão.
 
 
 ## Lista de Comandos
@@ -134,10 +140,10 @@ Para começar a vigiar uma expressão, insira `watch("sua_expressao")`. O comand
 Também é possível inserir um ponto de interrupção em um arquivo (módulo) que ainda não foi carregado, por exemplo usando o comando `setBreakpoint('mod.js', 23)` adiciona um ponto de interrupção no módulo `mod.js` na linha `23`.
 
 {% highlight javascript %}
-$ ./node debug test/fixtures/break-in-module/main.js
+$ node debug main.js
 < debugger listening on port 5858
 connecting to port 5858... ok
-break in test/fixtures/break-in-module/main.js:1
+break in /home/rafadev/git/depurador/main.js:1
   1 var mod = require('./mod.js');
   2 mod.hello();
   3 mod.hello();
@@ -147,7 +153,7 @@ Warning: script 'mod.js' was not loaded yet.
   2 mod.hello();
   3 mod.hello();
 debug> c
-break in test/fixtures/break-in-module/mod.js:23
+break in /home/rafadev/git/depurador/mod.js:23
  21
  22 exports.hello = function() {
  23   return 'hello from module';
