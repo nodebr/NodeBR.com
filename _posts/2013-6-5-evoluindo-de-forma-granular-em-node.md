@@ -9,7 +9,7 @@ author:
   github: rafadev7
   twitter: rafadev7
 tags: [conceito, básico]
-reference: Este artigo foi extraído do livro Art of Node escrito por [Max Ogden](http://maxogden.com/), traduzido por [Kaique Silva](http://kaiquewdev.nodester.com/) e revisado por mim. Ele está disponível no [repositório do github](https://github.com/fth-ship/art-of-node) sobre a licença [Creative Commons Attribution](http://creativecommons.org/licenses/by/2.0/).
+reference: Este artigo foi extraído do livro Art of Node escrito por <a href="http://maxogden.com/">Max Ogden</a>, traduzido por <a href="http://kaiquewdev.nodester.com/">Kaique Silva</a> e revisada por <a href="http://rafadev.com/">mim</a>. Ele está disponível no <a href="https://github.com/fth-ship/art-of-node">repositório do github</a> sobre a licença <a href="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution</a>.
 ---
 Como todo boa ferramenta, o node é bem adequado para certos casos de uso. Por exemplo: Rails, o popular web framework, é ótimo para modelar complexas [lógicas de negócio](http://en.wikipedia.org/wiki/Business_logic), ex. usando código para representar a vida em um plano objetivado que vivemos físicamente como contas, empréstimos, itinerários e inventários. Embora tecnicamente seja possivel fazer o memso utilizando o node, haveria desvantagens claras sabendo que o node é projetado para resolver problemas de I/O e não saber sobre a pate da 'lógica de negócio'. Cada ferramente tem seu foco voltado a resolver diferentes problemas. Esperamos que este guia ajude-o a ganhar uma compreensão intuitiva dos pontos fortes do node e você saberá quando ele será útil.
 

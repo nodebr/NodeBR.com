@@ -9,7 +9,7 @@ author:
   github: rafadev7
   twitter: rafadev7
 tags: [conceito, básico]
-reference: Este artigo foi extraído do livro Art of Node escrito por [Max Ogden](http://maxogden.com/), traduzido por [Kaique Silva](http://kaiquewdev.nodester.com/) e revisado por mim. Ele está disponível no [repositório do github](https://github.com/fth-ship/art-of-node) sobre a licença [Creative Commons Attribution](http://creativecommons.org/licenses/by/2.0/).
+reference: Este artigo foi extraído do livro Art of Node escrito por <a href="http://maxogden.com/">Max Ogden</a>, traduzido por <a href="http://kaiquewdev.nodester.com/">Kaique Silva</a> e revisada por <a href="http://rafadev.com/">mim</a>. Ele está disponível no <a href="https://github.com/fth-ship/art-of-node">repositório do github</a> sobre a licença <a href="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution</a>.
 ---
 Primeiro eu recomendo que uma versão do node esteja instalada no seu computador. Um modo fácil para que isso aconteça e visitando [nodejs.org](http://nodejs.org) e clique em `Install`.
 
