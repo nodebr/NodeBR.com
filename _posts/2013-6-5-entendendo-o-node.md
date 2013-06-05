@@ -9,6 +9,7 @@ author:
   github: rafadev7
   twitter: rafadev7
 tags: [conceito, básico]
+reference: Este artigo foi extraído do livro Art of Node escrito por [Max Ogden](http://maxogden.com/), traduzido por [Kaique Silva](http://kaiquewdev.nodester.com/) e revisado por mim. Ele está disponível no [repositório do github](https://github.com/fth-ship/art-of-node) sobre a licença [Creative Commons Attribution](http://creativecommons.org/licenses/by/2.0/).
 ---
 Node.js é um projeto de código aberto projetado para auxiliar na escrita de programas em JavaScript que conversem com redes, sistema de arquivos ou outro I/O (entrada/saida, leitura/escrita).
 É isso o que ele é. Ele é uma simples e estável plataforma de I/O que encoraja você a escrever módulos para funcionar nele.
@@ -55,5 +56,3 @@ Aqui tem uma lista de coisas divertidas que podem serem feitas com graças ao no
   - Controle [quadicopteros voadores](http://nodecopter.com)
   - Escrever bots par ao chat IRC
   - Criar [robôs bipedes que andam](http://www.youtube.com/watch?v=jf-cEB3U2UQ)
-
-Este artigo foi extraído do livro Art of Node escrito por [Max Ogden](http://maxogden.com/), traduzido por [Kaique Silva](http://kaiquewdev.nodester.com/) e revisada por [mim](http://rafadev.com/). Ele está disponível no [repositório do github](https://github.com/fth-ship/art-of-node) sobre a licença [Creative Commons Attribution](http://creativecommons.org/licenses/by/2.0/).

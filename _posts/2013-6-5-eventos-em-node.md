@@ -9,6 +9,7 @@ author:
   github: rafadev7
   twitter: rafadev7
 tags: [conceito, básico]
+reference: Este artigo foi extraído do livro Art of Node escrito por [Max Ogden](http://maxogden.com/), traduzido por [Kaique Silva](http://kaiquewdev.nodester.com/) e revisado por mim. Ele está disponível no [repositório do github](https://github.com/fth-ship/art-of-node) sobre a licença [Creative Commons Attribution](http://creativecommons.org/licenses/by/2.0/).
 ---
 No node com o módulo de [eventos](http://nodejs.org/api/events.html) você pode disparar eventos, também chamando de 'emissor de evento', até mesmo o node usa em todas as suas APIs para emitir coisas.
 

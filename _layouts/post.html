@@ -72,6 +72,11 @@ layout: default
         {% endunless %}
         
       {% endunless %} 
+      
+      {% unless page.reference == nil or page.reference == empty  %}
+        <h3><i class="icon-list-alt"></i> Referência</h3>
+        <p>{{ page.reference }}</p>
+      {% endunless %} 
 
       {% assign exist = false %}
       {% for post in site.related_posts %}
@@ -88,6 +93,7 @@ layout: default
       
       {% include feed-subscribe.html %}
       {% include share-post.html %}
+      
     </aside>
   </div>
 </div>
