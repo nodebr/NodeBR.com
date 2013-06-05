@@ -90,5 +90,3 @@ function storeMessage(message) {
 {% endhighlight %}
 
 Mais conteúdo sobre eventos em Node está por ser escrito ainda no livro...
-
-Este artigo foi extraído do livro Art of Node escrito por [Max Ogden](http://maxogden.com/), traduzido por [Kaique Silva](http://kaiquewdev.nodester.com/) e revisada por [mim](http://rafadev.com/). Ele está disponível no [repositório do github](https://github.com/fth-ship/art-of-node) sobre a licença [Creative Commons Attribution](http://creativecommons.org/licenses/by/2.0/).
