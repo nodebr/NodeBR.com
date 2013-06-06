@@ -16,7 +16,7 @@ Node.js é um projeto de código aberto projetado para auxiliar na escrita de pr
 
 Quais são alguns exemplos de I/O? Bom... aqui tem um diagrama de uma aplicação que eu fiz com node e ela mostra várias fontes de I/O:
 
-![diagrama do servidor](img/posts/diagrama-servidor.png)
+![diagrama do servidor]({{ site.url }}/img/posts/diagrama-servidor.png)
 
 Se você não entende todas as diferentes coisas que estão nesse diagrama, fique tranquilo. O ponto é, mostrar um unico nó de processo (o hexagono no meio) pode agir como o corredor entre todos os diferentes pontos finais de I/O (laranja e roxo representam I/O).
 
