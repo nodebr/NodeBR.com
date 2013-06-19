@@ -75,4 +75,4 @@ console.log(util.inspect(console, false, 2, true));
 
 
 [módulo util]: http://nodejs.org/api/util.html
-[artigo falando sobre o REPL do Node]: {% post_url 2013-5-23-como-usar-o-repl-do-nodejs %}
+[artigo falando sobre o REPL do Node]: {{ site.url }}{% post_url 2013-5-23-como-usar-o-repl-do-nodejs %}
