@@ -14,7 +14,7 @@ A primeira encarnação do [JavaScript][] viveu no navegador. Mas este é o cont
 
 [Node.js][] é realmente só mais um contexto: isso permite você rodar código JavaScript em backend, fora do navegador.
 
-A fim de executar o **JavaScript** que você pretende rodar em backend, ele precisa ser interpretado e executado. Isso é o que **Node.js** faz, fazendo uso da [Google's V8 VM][], o mesmo ambiente de execução do JavaScript usado pelo Google Chrome.
+A fim de executar o **JavaScript** que você pretende rodar em backend, ele precisa ser interpretado e executado. Isso é o que **Node.js** faz, fazendo uso da [Máquina Virtual V8 da Google][], o mesmo ambiente de execução do JavaScript usado pelo Google Chrome.
 
 Além disso, Node.js vem com muitos módulos úteis, então você não precisa escrever tudo do começo, por exemplo alguma função que escreva uma string no console.
 
@@ -22,4 +22,4 @@ Portanto, Node.js é de fato duas coisas: um ambiente de execução e uma biblio
 
 [Node.js]: http://nodejs.org/
 [JavaScript]: http://pt.wikipedia.org/wiki/JavaScript
-[Google's V8 VM]: http://code.google.com/p/v8/
+[Máquina Virtual V8 da Google]: http://code.google.com/p/v8/
