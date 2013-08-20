@@ -103,4 +103,4 @@ Você pode verificar se a instalação foi bem concluída com um simples [exempl
 [download do instalador do node.js]: http://nodejs.org/download/
 [chocolatey]: http://chocolatey.org/
 [NPM]: https://npmjs.org/
-[exemplo Hello World em Node.js]: {% post_url 2013-1-6-exemplo-hello-world-em-node-js %}
+[exemplo Hello World em Node.js]: {% post_url 2013-2-12-exemplo-hello-world-em-node-js %}

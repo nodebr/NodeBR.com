@@ -85,4 +85,4 @@ Você pode verificar se a instalação foi bem concluída com um simples [exempl
 [Instale o Xcode]: https://developer.apple.com/xcode/
 [Instale o Git]: http://help.github.com/mac-git-installation/
 [Instalar cygwin]: http://www.mcclean-cooper.com/valentino/cygwin_install/
-[exemplo Hello World em Node.js]: {% post_url 2013-1-6-exemplo-hello-world-em-node-js %}
+[exemplo Hello World em Node.js]: {% post_url 2013-2-12-exemplo-hello-world-em-node-js %}
