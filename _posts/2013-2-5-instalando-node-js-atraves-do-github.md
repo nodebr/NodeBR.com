@@ -76,7 +76,7 @@ make
 sudo make install
 {% endhighlight %}
 
-Você pode verificar se a instalação foi bem concluída com um simples [exemplo Hello World em node][]!
+Você pode verificar se a instalação foi bem concluída com um simples [exemplo Hello World em Node.js][]!
 
 [Git]: http://git-scm.com/
 [GitHub]: https://github.com/
