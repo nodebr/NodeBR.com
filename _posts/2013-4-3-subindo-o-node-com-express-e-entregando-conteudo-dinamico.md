@@ -107,5 +107,6 @@ Conclusão
 Fizemos um setup básico para uma aplicação rodando em express. Essa foi uma um post de introdução funcional, outros posts irão explorar melhor as características do **express** e vão mostrar como este framework se comporta com aplicações mais elaboradas.
 
 [Node]: http://nodejs.org/
+[NPM]: https://npmjs.org
 [express]: http://expressjs.com/
 [consolidate]: https://github.com/visionmedia/consolidate.js
