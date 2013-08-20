@@ -42,7 +42,7 @@ exports.circunferencia = function (r) {
 };
 {% endhighlight %}
 
-Neste exemplo o múdolo `circulo.js` exportou as funções `area()` e `circunferencia()`. Aqui é apresentado o principal conceito do sistema de carregamento módulos do Node, para um módulo exportar um objeto, ou um construtor, basta adicioná-lo no objeto especial `exports`. Todas as demais variáveis declaradas dentro do módulo serão variáveis privadas do módulo e não serão exportadas, neste exemplo a variável `PI` é privada do módulo `circulo.js` e não é acessível no escopo de `calculo.js`.
+Neste exemplo o múdolo `circulo.js` exportou as funções `area()` e `circunferencia()` . Aqui é apresentado o principal conceito do sistema de carregamento módulos do Node, para um módulo exportar um objeto, ou um construtor, basta adicioná-lo no objeto especial `exports` . Todas as demais variáveis declaradas dentro do módulo serão variáveis privadas do módulo e não serão exportadas, neste exemplo a variável `PI` é privada do módulo `circulo.js` e não é acessível no escopo de `calculo.js` .
 
 É importante frisar que `exports` é uma referência para `module.exports` utilizado apenas para o acréscimo de objetos, caso você queira exportar um único item, como um construtor, você vai precisar usar o objeto `module.exports` diretamente. Acompanhe o exemplo do nosso módulo `construtor.js` apresentado a seguir.
 
@@ -59,9 +59,9 @@ exports = MeuConstrutor;
 module.exports = MeuConstrutor;
 {% endhighlight %}
 
-Note que a linha `exports = MeuConstrutor;` não irá ter o comportamento esperado, caso o exeplo parasse nesta linha apenas um objeto vazio seria exportado. Para exportar um único objeto, ou um construtor como neste exemplo, deve-se utilizar a variável `module.exports`.
+Note que a linha `exports = MeuConstrutor;` não irá ter o comportamento esperado, caso o exeplo parasse nesta linha apenas um objeto vazio seria exportado. Para exportar um único objeto, ou um construtor como neste exemplo, deve-se utilizar a variável `module.exports` .
 
-O sistema de módulos é implementado no módulo `require("module")`.
+O sistema de módulos é implementado no módulo `require("module")` .
 
 
 ### Importações cíclicas
@@ -99,7 +99,7 @@ console.log('dentro de principal, a.pronto=%j, b.pronto=%j', a.pronto, b.pronto)
 console.log('principal pronto');
 {% endhighlight %}
 
-Quando o módulo `principal.js` carrega `a.js`, por sua vez `a.js` carrega `b.js`, neste ponto `b.js` tenta carregar `a.js`. Para evitar um cíclo infinito, de `a.js` carregando `b.js` e vice-versa, uma **cópia incompleta** do objeto `exports` de `a.js` é retornada para o módulo `b.js`. Então `b.js` completa seu carregamento, e seu objeto `exports` é fornecido para o módulo `a.js`.
+Quando o módulo `principal.js` carrega `a.js`, por sua vez `a.js` carrega `b.js`, neste ponto `b.js` tenta carregar `a.js` . Para evitar um cíclo infinito, de `a.js` carregando `b.js` e vice-versa, uma **cópia incompleta** do objeto `exports` de `a.js` é retornada para o módulo `b.js` . Então `b.js` completa seu carregamento, e seu objeto `exports` é fornecido para o módulo `a.js` .
 
 Quando `principal.js` terminar de carregar, ambos os módulos estarão prontos. A saída deste programa seria assim:
 
@@ -123,34 +123,34 @@ Esta foi a forma que os desenvolvedores do Node utilizaram para resolver o probl
 
 O Node tem muitos módulos compilados em arquivos binários. Estes módulos estão descritos em detalhes na [documentação da API do Node][] - em Inglês.
 
-Os módulos do núcleo (em Inglês **core***) estão dentro da pasta `lib/` na raiz do Node.
+Os módulos do núcleo (em Inglês **core***) estão dentro da pasta `lib/ ` na raiz do Node.
 
-O Node sempre dá preferência em carregar os módulos do núcleo se seu identificador é passado para a função `require()`. Por exemplo `require('http')` irá sempre retornar o módulo `HTTP` embutido no núcelo do Node, mesmo que tenha um arquivo com o mesmo nome nesta pasta.
+O Node sempre dá preferência em carregar os módulos do núcleo se seu identificador é passado para a função `require()` . Por exemplo `require('http')` irá sempre retornar o módulo `HTTP` embutido no núcelo do Node, mesmo que tenha um arquivo com o mesmo nome nesta pasta.
 
 
 ### Arquivo dos Módulos
 
-Caso o nome do arquivo passado para a função `require()` não for encontrado, então o Node irá tentar carregar um arquivo com o nome passado adicionando a extensão `.js`, `.json`, e por fim `.node`.
+Caso o nome do arquivo passado para a função `require()` não for encontrado, então o Node irá tentar carregar um arquivo com o nome passado adicionando a extensão ` .js`, ` .json`, e por fim ` .node` .
 
-Notar que arquivos `.js` são interpretados como arquivos de texto **JavaScript** e arquivos `.json` são analisados como arquivos de texto **JSON**. Já arquivos `.node` são interpretados como um módulo compilado carregado com `dlopen`.
+Notar que arquivos ` .js` são interpretados como arquivos de texto **JavaScript** e arquivos ` .json` são analisados como arquivos de texto **JSON**. Já arquivos ` .node` são interpretados como um módulo compilado carregado com `dlopen` .
 
-Um módulo com prefixo `/` será buscado no caminho absoluto sistema de arquivos. Por exemplo, `require('/home/node/exemplo.js')` irá carregar o arquivo presente em `/home/node/exemplo.js`.
+Um módulo com prefixo ` / ` será buscado no caminho absoluto sistema de arquivos. Por exemplo, `require('/home/node/exemplo.js')` irá carregar o arquivo presente em ` /home/node/exemplo.js` .
 
-Um módulo com prefixo `./` será buscado no caminho relativo ao módulo que chamou a função `require()`. Como no exemplo apresentado, `circulo.js` deve estar no mesmo diretório de `calculo.js` para que `require('./circulo.js')` encontre ele.
+Um módulo com prefixo ` ./ ` será buscado no caminho relativo ao módulo que chamou a função `require()` . Como no exemplo apresentado, `circulo.js` deve estar no mesmo diretório de `calculo.js` para que `require('./circulo.js')` encontre ele.
 
-Já um módulo com prefixo `../` será buscado na pasta superior relativa ao módulo que chamou a função `require()`.
+Já um módulo com prefixo ` ../ ` será buscado na pasta superior relativa ao módulo que chamou a função `require()` .
 
-Caso o módulo requisitado não contenha o prefixo `/` ou `./` para indicar a localização do arquivo o módulo será considerado ou um módulo do núcleo ou um módulo instalado na pasta `node_modules`, gerenciada pela `NPM`.
+Caso o módulo requisitado não contenha o prefixo ` / ` ou ` ./ ` para indicar a localização do arquivo o módulo será considerado ou um módulo do núcleo ou um módulo instalado na pasta `node_modules`, gerenciada pela `NPM` .
 
-Agora se o caminho do arquivo não existir, `require()` vai emitir um Erro com sua propriedade `code` igua a `'MODULE_NOT_FOUND'`.
+Agora se o caminho do arquivo não existir, `require()` vai emitir um Erro com sua propriedade `code` igua a `'MODULE_NOT_FOUND'` .
 
 
 
 ### Carregando da pasta node_modules
 
-Se o identificador passado para `require()` não é um módulo nativo, e não começa com `/`, `../`, ou `./`, então Node começa a buscar no diretório pai do módulo atual, e adiciona `/node_modules`, e espera carregar o módulo requisitado neste local. Se ele não for encontrado lá, então ele move para o diretório pai do diretório atual, e assim sucessivamente, até atingir o diretório raíz do sistema.
+Se o identificador passado para `require()` não é um módulo nativo, e não começa com ` / `, ` ../ `, ou ` ./ `, então Node começa a buscar no diretório pai do módulo atual, e adiciona ` /node_modules`, e espera carregar o módulo requisitado neste local. Se ele não for encontrado lá, então ele move para o diretório pai do diretório atual, e assim sucessivamente, até atingir o diretório raíz do sistema.
 
-Por exemplo, se o arquivo `/home/node/projetos/exemplo.js` chamou `require('meu_modulo.js')`, então o Node deve procurar nos seguintes locais, nesta ordem:
+Por exemplo, se o arquivo ` /home/node/projetos/exemplo.js` chamou `require('meu_modulo.js')`, então o Node deve procurar nos seguintes locais, nesta ordem:
 
 {% highlight console %}
 /home/node/projetos/node_modules/meu_modulo.js
@@ -165,7 +165,7 @@ Por exemplo, se o arquivo `/home/node/projetos/exemplo.js` chamou `require('meu_
 
 É conveniente organizar programas e bibliotecas dentro de seus diretórios independentes, e então fornecer um único acesso para esta biblioteca. Há três maneiras que uma pasta pode ser passada para a função `require()` como um argumento.
 
-A primeira é criando um arquivo `package.json` na raíz da pasta, que especifica o módulo principal - `main` - e um nome - `name`. Veja um exemplo do arquivo `package.json` a seguir:
+A primeira é criando um arquivo `package.json` na raíz da pasta, que especifica o módulo principal - `main` - e um nome - `name` . Veja um exemplo do arquivo `package.json` a seguir:
 
 
 {% highlight javascript %}
@@ -173,9 +173,9 @@ A primeira é criando um arquivo `package.json` na raíz da pasta, que especific
   "main" : "./lib/uma-biblioteca.js" }
 {% endhighlight %}
 
-Se este exemplo estivesse na pasta `./uma-biblioteca`, então uma chamada `require('./uma-biblioteca')` tentaria carregar o arquivo `./uma-biblioteca/lib/uma-biblioteca.js`.
+Se este exemplo estivesse na pasta ` ./uma-biblioteca`, então uma chamada `require('./uma-biblioteca')` tentaria carregar o arquivo ` ./uma-biblioteca/lib/uma-biblioteca.js` .
 
-Caso não haja um arquivo `package.json` presente no diretório, então node tentaria carregar um arquivo `index.js` ou `index.node` presentes neste diretório. Se no exemplo dado não existisse o arquivo `package.json`, então uma chamada a `require('./uma-biblioteca')` tentaria carregar o arquivo `./uma-biblioteca/index.js` ou `./uma-biblioteca/index.node`.
+Caso não haja um arquivo `package.json` presente no diretório, então node tentaria carregar um arquivo `index.js` ou `index.node` presentes neste diretório. Se no exemplo dado não existisse o arquivo `package.json`, então uma chamada a `require('./uma-biblioteca')` tentaria carregar o arquivo ` ./uma-biblioteca/index.js` ou ` ./uma-biblioteca/index.node` .
 
 
 ### Módulos salvos em Cache
@@ -189,16 +189,16 @@ Caso você precise que um módulo execute um código várias vezes, então expor
 
 ### Advertências para Módulos salvos em Cache
 
-Um módulo é salvo no Cache baseado no seu endereço em disco, por exemplo `/home/node/projetos/node_modules/meu_modulo.js`. Uma vez que uma chamada para a função `require('meu_modulo')` faz uma busca pelo módulo em vários diretórios, seguindo a sequência passada, caso ela encontre o módulo em uma pasta diferente da já salva em Cache, por exemplo no diretório atual `./meu_modulo.js`, então o módulo será considerado um módulo novo e não será usado a referência já salva em Cache.
+Um módulo é salvo no Cache baseado no seu endereço em disco, por exemplo ` /home/node/projetos/node_modules/meu_modulo.js` . Uma vez que uma chamada para a função `require('meu_modulo')` faz uma busca pelo módulo em vários diretórios, seguindo a sequência passada, caso ela encontre o módulo em uma pasta diferente da já salva em Cache, por exemplo no diretório atual ` ./meu_modulo.js`, então o módulo será considerado um módulo novo e não será usado a referência já salva em Cache.
 
 
 ## O objeto module
 
-Em cada módulo `module` é uma variável re referencia para o objeto que representa o módulo atual. Em particular `module.exports` é acessível através do módulo global `exports`. O objeto `modulo` na realidade não é global, mas um objeto local de cada módulo.
+Em cada módulo `module` é uma variável re referencia para o objeto que representa o módulo atual. Em particular `module.exports` é acessível através do módulo global `exports` . O objeto `modulo` na realidade não é global, mas um objeto local de cada módulo.
 
 ### module.exports
 
-O objeto `module.exports` é criado pelo sistema de módulos do Node e a variável `exports` aponta para este objeto. Seu módulo pode retornar vários objetos e funções simplesmente adicionando-os a variável `export`, por exemplo `exports.falar = function(){ console.log('Bom dia!') };`. Porém algumas vezes gostaríamos que nosso módulo retorne a instância de uma classe. Atribua o objeto desejado para ser exportado em `module.exports`. Atenção, neste caso não utilize a variável `exports`. Por exemplo suponha que estivéssemos fazendo um módulo chamado `a.js`.
+O objeto `module.exports` é criado pelo sistema de módulos do Node e a variável `exports` aponta para este objeto. Seu módulo pode retornar vários objetos e funções simplesmente adicionando-os a variável `export`, por exemplo `exports.falar = function(){ console.log('Bom dia!') };` . Porém algumas vezes gostaríamos que nosso módulo retorne a instância de uma classe. Atribua o objeto desejado para ser exportado em `module.exports` . Atenção, neste caso não utilize a variável `exports` . Por exemplo suponha que estivéssemos fazendo um módulo chamado `a.js` .
 
 {% highlight javascript %}
 // a.js
@@ -248,9 +248,9 @@ Um módulo Node tem variáveis disponíveis por padrão no escopo de cada módul
 - process.argv: Um **array** contendo os argumentos de linha de comando. O primeiro elemento será `node`, o segundo elemento será o nome do arquivo JavaScript, e os próximos serão todos os argumentos de linha de comandos adicionais, caso sejam atribuídos
 - process.stdin, process.stout, process.stderr: **Streams** que correspondem à entrada padrão, a saída padrão, e a saída de erro padrão do processo atual
 - process.env: Um objeto contendo as variáveis de ambiente do usuário do processo atual
-- **require.main**: Quando um arquivo é executado diretemente pelo Node, `require.main` é atribuído à este `module`.
+- **require.main**: Quando um arquivo é executado diretemente pelo Node, `require.main` é atribuído à este `module` .
 
-Execute o exemplo a seguir para que você acompanhar a utilização destas variáveis dentro de um módulo, você pode executar o código abaixo salvando-o em um arquivo `exemplo.js` e executando através da linha de comando `node exemplo.js`.
+Execute o exemplo a seguir para que você acompanhar a utilização destas variáveis dentro de um módulo, você pode executar o código abaixo salvando-o em um arquivo `exemplo.js` e executando através da linha de comando `node exemplo.js` .
 
 {% highlight javascript %}
 // exemplo.js
@@ -280,11 +280,11 @@ $PREFIX/lib/node
 
 Onde `$HOME` é o diretório Home do usuário e `$PREFIX` é a configuração `node_prefix` do Node.
 
-Estes são, em maior parte, por razões históricas. Sendo que você sempre será altamente encorajado à colocar suas dependências localmente na pasta `node_modules`. Elas serão carregadas mais rápido e com mais segurança.
+Estes são, em maior parte, por razões históricas. Sendo que você sempre será altamente encorajado à colocar suas dependências localmente na pasta `node_modules` . Elas serão carregadas mais rápido e com mais segurança.
 
 ### Identificando o módulo principal
 
-Quando um arquivo é executado diretamente no Node, `require.main` é definido como seu `module`. Isso significa que você pode determinar quando um arquivo está sendo executado diretamente fazendo o teste:
+Quando um arquivo é executado diretamente no Node, `require.main` é definido como seu `module` . Isso significa que você pode determinar quando um arquivo está sendo executado diretamente fazendo o teste:
 
 {% highlight javascript %}
 require.main === module
@@ -292,7 +292,7 @@ require.main === module
 
 Para o exemplo apresentado `principal.js`, esta operação retornará `true` se executado diretamente via `node principal.js`, porém retornará `false` se executado através de uma importação `require('./principal.js')`
 
-Pelo fato do objeto `module` fornecer a propriedade `filename` (normalmente equivalente à variável global - diferente para cada módulo - `__filemane`), você também pode obter o endereço do ponto de entrada da aplicação, o módulo principal, através da variável `require.main.filename`.
+Pelo fato do objeto `module` fornecer a propriedade `filename` (normalmente equivalente à variável global - diferente para cada módulo - `__filemane`), você também pode obter o endereço do ponto de entrada da aplicação, o módulo principal, através da variável `require.main.filename` .
 
 Note que se você importar um módulo através do `REPL` do Node a variável `require.main` naturalmente retornará `undefined`, porque não há um módulo principal sendo executado, e sim a linha de comando do Node.
 
