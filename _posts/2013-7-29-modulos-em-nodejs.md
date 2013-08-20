@@ -123,7 +123,7 @@ Esta foi a forma que os desenvolvedores do Node utilizaram para resolver o probl
 
 O Node tem muitos módulos compilados em arquivos binários. Estes módulos estão descritos em detalhes na [documentação da API do Node][] - em Inglês.
 
-Os módulos do núcleo (em Inglês **core***) estão dentro da pasta `lib/ ` na raiz do Node.
+Os módulos do núcleo (em Inglês **core**) estão dentro da pasta `lib/ ` na raiz do Node.
 
 O Node sempre dá preferência em carregar os módulos do núcleo se seu identificador é passado para a função `require()` . Por exemplo `require('http')` irá sempre retornar o módulo `HTTP` embutido no núcelo do Node, mesmo que tenha um arquivo com o mesmo nome nesta pasta.
 
