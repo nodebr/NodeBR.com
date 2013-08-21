@@ -9,7 +9,6 @@ author:
   github: rafadev7
   twitter: rafadev7
 tags: [dica]
-published: false
 reference: Este artigo foi extraído do <a href="http://callbackhell.com/" rel="nofollow">artigo Callback Hell</a>, escrito por <a href="http://maxogden.com/" rel="nofollow">Max Ogden</a>, disponível no <a href="https://github.com/maxogden/callback-hell" rel="nofollow">repositório do GitHub</a>, traduzido e adaptado por <a href="http://rafadev.com/">mim RafaDev</a>.
 ---
 Este artigo é um guia para se escrever programas assíncronos em JavaScript que expõe dicas para se evitar o 'inferno de callbacks'.
