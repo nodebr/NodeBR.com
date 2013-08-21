@@ -10,6 +10,7 @@ author:
   twitter: rafadev7
 tags: [conceito, básico]
 published: false
+reference: Este artigo foi extraído do endereço <a href="http://site.com/">Site</a>.
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nisi metus. 

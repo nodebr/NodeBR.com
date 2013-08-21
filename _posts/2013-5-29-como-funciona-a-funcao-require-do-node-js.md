@@ -102,9 +102,9 @@ Observação:
 - Você pode omitir o <code>.js</code>, o <code>require</code> vai automáticamente adicioná-lo caso for necessário.
 - Se o nome do arquivo passado para <code>require</code> é o nome de um diretório, a função vai primeiramente buscar por <code>package.json</code> no diretório e então carregar o arquivo referenciado na propriedade <code>main</code>. Caso contrário a função irá procurar por um arquivo chamado <code>index.js</code> dentro da pasta.
 
-Para informações mais detalhadas veja a [sessão de módulos na documentação oficial do node][].
+Para informações mais detalhadas veja o [artigo detalhado sobre módulos em Node.js][].
 
 
 [CommonJS]: http://pt.wikipedia.org/wiki/CommonJS
 [REPL do node]: http://nodebr.com/como-usar-o-repl-do-nodejs/
-[sessão de módulos na documentação oficial do node]: http://nodejs.org/api/modules.html
+[artigo detalhado sobre módulos em Node.js]: {{ site.url }}{% post_url 2013-7-29-modulos-em-nodejs %}
