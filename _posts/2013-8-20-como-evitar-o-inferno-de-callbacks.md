@@ -13,7 +13,7 @@ reference: Este artigo foi extraído do <a href="http://callbackhell.com/" rel="
 ---
 Este artigo é um guia para se escrever programas assíncronos em JavaScript que expõe dicas para se evitar o 'inferno de callbacks'.
 
-O bom entendimento de callbacks é essencial para a programação orientada a eventos do Node, este é o nome dado a funções que serão executadas de modo assíncrono, ou posteriormente. Caso tenha dúvidas do que é uma callback, você pode ler o [artigo explicando callbacks em Node][].
+O bom entendimento de callbacks é essencial para a programação orientada a eventos do Node, este é o nome dado a funções que serão executadas de modo assíncrono, ou posteriormente. Caso tenha dúvidas do que é uma função callback você pode ler o [artigo explicando callbacks em Node][].
 
 ## O que é o 'inferno de callbacks'
 
@@ -90,9 +90,9 @@ form.onsubmit = function formSubmit(submitEvent) {
 
 Como você pode ver nomear as funções é muito fácil e traz algumas coisas boas para seu código:
 
--- Facilita a leitura do código
--- Quando acontecem exceções você pega rastreamento da pilha (stacktraces) que referencia o nome atual da função ao invés de "anonymous"
--- Permite você manter seu código mais raso, ou não aninhado profundamente
+- Facilita a leitura do código
+- Quando acontecem exceções você pega rastreamento da pilha (stacktraces) que referencia o nome atual da função ao invés de "anonymous"
+- Permite você manter seu código mais raso, ou não aninhado profundamente
 
 ## Mantenha seu código raso
 
@@ -161,9 +161,9 @@ document.querySelector('form').onsubmit = formUploader.submit
 
 Agora nossa aplicação exemplo apresentada só possui duas linhas e tem os seguintes benefícios:
 
--- Facilita o entendimento de novos desenvolvedores - Eles não precisam empacar tentando ler todas as funções `formuploader` para entender o que está acontecendo aqui
--- As funções do `formuploader` agora podem ser usadas em outros lugares sem a duplicação de código e pode facilmente ser compartilhaada no GitHub
--- O código em sí é agradável, simples e fácil de ler
+- Facilita o entendimento de novos desenvolvedores - Eles não precisam empacar tentando ler todas as funções `formuploader` para entender o que está acontecendo aqui
+- As funções do `formuploader` agora podem ser usadas em outros lugares sem a duplicação de código e pode facilmente ser compartilhaada no GitHub
+- O código em sí é agradável, simples e fácil de ler
 
 Há muitos padrões de módulos [para o navegador][] e [para o servidor][]. Alguns deles são muito complicados. Os mostrados aqui são os considerados mais simples de se entender.
 
@@ -177,7 +177,7 @@ O escopo deste artigo é mostrar como escrever um código agradável em JavaScri
 
 ## Leitura adicional
 
--- [Um padrão para desacoplar eventos DOM (em Inglês)][]
+- [Um padrão para desacoplar eventos DOM (em Inglês)][]
 
 
 
