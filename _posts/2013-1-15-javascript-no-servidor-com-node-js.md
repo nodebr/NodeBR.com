@@ -35,5 +35,5 @@ Caso você queira conhecer mais sobre eventos e como desenvolver aplicações or
 [instalar o Node.js através do GitHub]: {{ site.url }}{% post_url 2013-2-5-instalando-node-js-atraves-do-github %}
 [Exemplo Hello World em Node.js]: {{ site.url }}{% post_url 2013-2-12-exemplo-hello-world-em-node-js %}
 [artigo explicando eventos em Node]: {{ site.url }}{% post_url 2013-6-5-eventos-em-node %}
-[comunidades de Node.js]: {{ site.url }}{% 2013-1-10-comunidades-de-node-js %}
+[comunidades de Node.js]: {{ site.url }}{% post_url 2013-1-10-comunidades-de-node-js %}
 [assinar nosso Feed de notícias]: http://feeds.feedburner.com/NodeBR/
