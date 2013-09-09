@@ -9,6 +9,7 @@ author:
   github: rafadev7
   twitter: rafadev7
 tags : [conceito, básico]
+reference: Este artigo foi extraído do artigo <a href="http://www.ibm.com/developerworks/br/library/os-nodejs/">O que exatamente é o Node.js?</a> escrito por Michael Abernethy e adaptado por mim <a href="http://rafadev.com/">RafaDev</a>.
 ---
 [Node.js][] é uma plataforma construída sobre o motor **JavaScript** do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis. **Node.js** usa um modelo de I/O direcionada a evento não bloqueante que o torna leve e eficiente, ideal para aplicações em tempo real com troca intensa de dados através de dispositivos distribuídos.
 
