@@ -23,6 +23,6 @@ A aplicação criada no livro é uma agenda de contatos que permite conversar co
 O livro é recomendado para todos que tenham conhecimentos básicos de Javascript e domine os conceitos básicos de arquitetura cliente-servidor.
 
 ## Cupom de descontos
-Se você gostou da resenha e quer conhecer melhor este livro, acesse esse link: http://www.casadocodigo.com.br/products/livro-nodejs para comprá-lo e utilize esse cupom que te dará 15% de descontos: `NODEBR1013`. Lembrando que este cupom é válido até dia 4 de novembro de 2013, então compre já!
+Se você gostou da resenha e quer conhecer melhor este livro, acesse esse link: https://casadocodigo.refersion.com/l/630.1389 para comprá-lo e utilize esse cupom que te dará 15% de descontos: `NODEBR1013`. Lembrando que este cupom é válido até dia 4 de novembro de 2013, então compre já!
 
 [Casa do Código]: http://casadocodigo.com.br
