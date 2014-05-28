@@ -42,7 +42,7 @@ exports.circunferencia = function (r) {
 };
 {% endhighlight %}
 
-Neste exemplo o múdolo `circulo.js` exportou as funções `area()` e `circunferencia()` . Aqui é apresentado o principal conceito do sistema de carregamento módulos do Node, para um módulo exportar um objeto, ou um construtor, basta adicioná-lo no objeto especial `exports` . Todas as demais variáveis declaradas dentro do módulo serão variáveis privadas do módulo e não serão exportadas, neste exemplo a variável `PI` é privada do módulo `circulo.js` e não é acessível no escopo de `calculo.js` .
+Neste exemplo o módulo `circulo.js` exportou as funções `area()` e `circunferencia()` . Aqui é apresentado o principal conceito do sistema de carregamento módulos do Node, para um módulo exportar um objeto, ou um construtor, basta adicioná-lo no objeto especial `exports` . Todas as demais variáveis declaradas dentro do módulo serão variáveis privadas do módulo e não serão exportadas, neste exemplo a variável `PI` é privada do módulo `circulo.js` e não é acessível no escopo de `calculo.js` .
 
 É importante frisar que `exports` é uma referência para `module.exports` utilizado apenas para o acréscimo de objetos, caso você queira exportar um único item, como um construtor, você vai precisar usar o objeto `module.exports` diretamente. Acompanhe o exemplo do nosso módulo `construtor.js` apresentado a seguir.
 
@@ -59,7 +59,7 @@ exports = MeuConstrutor;
 module.exports = MeuConstrutor;
 {% endhighlight %}
 
-Note que a linha `exports = MeuConstrutor;` não irá ter o comportamento esperado, caso o exeplo parasse nesta linha apenas um objeto vazio seria exportado. Para exportar um único objeto, ou um construtor como neste exemplo, deve-se utilizar a variável `module.exports` .
+Note que a linha `exports = MeuConstrutor;` não irá ter o comportamento esperado, caso o exemplo parasse nesta linha apenas um objeto vazio seria exportado. Para exportar um único objeto, ou um construtor como neste exemplo, deve-se utilizar a variável `module.exports` .
 
 O sistema de módulos é implementado no módulo `require("module")` .
 
