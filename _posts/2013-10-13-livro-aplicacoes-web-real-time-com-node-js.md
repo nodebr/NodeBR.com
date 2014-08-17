@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Livro: Aplicações web real-time com Node.js
+title: Livro - Aplicações web real-time com Node.js
 description: Para galera que pretende estudar Node.js, veja nesse post uma resenha sobre do mais recente livro brasileiro - Aplicações web real-time com Node.js.
 author:
   name: Caio Ribeiro Pereira
