@@ -33,6 +33,8 @@ layout: default
 
 
     <aside class="span3 sidebar">
+      {% include search.html %}
+      
       <h3><i class="icon-time"></i> Publicado em</h3>
       <div class="date"><span>{{ page.date | date: " %e de %B de %Y" | replace: 'January', 'Janeiro' | replace: 'February', 'Fevereiro' | replace: 'March', 'Março' | replace: 'April', 'Abril' | replace: 'May', 'Maio' | replace: 'June', 'Junho' | replace: 'July', 'Julho' | replace: 'August', 'Agosto' | replace: 'September', 'Setembro' | replace: 'October', 'Outubro' | replace: 'November', 'Novembro' | replace: 'December', 'Dezembro' }}</span></div>
       
