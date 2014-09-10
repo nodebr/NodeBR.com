@@ -27,7 +27,7 @@ O node usa JavaScript e não muda nada sobre isso. Felix Geisendörfer tem uma b
 
 #### Abstração da linguagem 
 
-Quando possivel o node vai usar a maneira mais simples de escrever algo. Código mais 'bonito' faz do seu JavaScript mais complexo e compromissado com vantagens e desvantagens. Programar é difícil, especialmente em JS onde você tem 1000 soluções para o mesmo problema! Essa é a principal razão para o node optar pela simplicidade sempre que possivel e que pode ser uma opção universal. Se você esta resolvendo um problema complexo e você esta insatisfeito com o modo que o node implementa as coisas com 'soluções de JS com gosto de baunilha' sinta-se livre para resolver isso dentro do seu app ou módulo usando qualquer abstrações que você preferir.
+Quando possivel o node vai usar a maneira mais simples de escrever algo. Código mais 'bonito' faz do seu JavaScript mais complexo e compromissado com vantagens e desvantagens. Programar é difícil, especialmente em JS onde você tem 1000 soluções para o mesmo problema! Essa é a principal razão para o node optar pela simplicidade sempre que possivel e que pode ser uma opção universal. Se você esta resolvendo um problema complexo e você esta insatisfeito com o modo que o node implementa as coisas com soluções originais do JS, sinta-se livre para resolver isso dentro do seu app ou módulo usando qualquer abstrações que você preferir.
 
 Um grande exemplo de como o node usa os callbacks. Logo no inicio foi experimentado a caracteristica chamada 'promessas' que adiciona algumas funcionalidades para fazer o código assincrono parecer mais linear. Ele foi levado para o fora do núcleo do node por algumas razões:
 
