@@ -1,5 +1,5 @@
 /*.highlight  { background: #333333; color: #ffffff}*/
-.highlight { color: #AAAAAA } /* Correcting some bug */
+.highlight pre code { color: #AAAAAA } /* Correcting some bug */
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #87ceeb} /* Comment */
 .highlight .err { color: #ffffff} /* Error */
