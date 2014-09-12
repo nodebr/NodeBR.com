@@ -1,4 +1,5 @@
 /*.highlight  { background: #333333; color: #ffffff}*/
+.highlight { color: #AAAAAA } /* Correcting some bug */
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #87ceeb} /* Comment */
 .highlight .err { color: #ffffff} /* Error */
@@ -68,3 +69,4 @@
 .highlight .vg { color: #98fb98} /* Name.Variable.Global */
 .highlight .vi { color: #98fb98} /* Name.Variable.Instance */
 .highlight .il { color: #ffffff} /* Literal.Number.Integer.Long */
+
