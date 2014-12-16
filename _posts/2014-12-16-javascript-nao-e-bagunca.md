@@ -30,7 +30,7 @@ Acredito que exemplos de códigos sobre projetos factíveis são mais fáceis de
 
 Com o escopo do nosso [MVP][http://en.wikipedia.org/wiki/Minimum_viable_product] definido, chegou a hora de codar.
 
----
+{% highlight javascript %}
 function CalculadoraFrete(origem,destino,peso){
  var _distancia = googleMaps.getDistance(origem,destino);
  var _valorFrete=[];
@@ -61,7 +61,6 @@ function CalculadoraFrete(origem,destino,peso){
   return _valorFrete[0];
  }
 }
----
 
 O código acima apresenta diversos problemas mas quero comentar as deficiências sobre a ótica do "open-closed principle".
 
@@ -69,7 +68,8 @@ Evolução dolorosa: A classe sempre será alterada quando funcionalidades forem
 
 Vamos melhorar a situação desse código? Começar pelos testes é uma técnica poderosa para se encontrar bons designs de objetos.
 
----
+{% highlight javascript %}
+
 var assert = require(“assert”); // npm install -g assert
 describe(‘CalculadoraFrete’, function(){
    it(‘O valor do frete tem que ser R$ 30,00 para uma distância de 15 km no mesmo município, para uma mercadoria que pesa até 10kg’, function(){
@@ -82,13 +82,12 @@ describe(‘CalculadoraFrete’, function(){
    assert.equal(_esperado,_resultado);
    })
 })
----
 
 Para manter o foco sobre o assunto "open-closed" não vou copiar os códigos de testes que fiz. Eles realmente me ajudaram a evoluir o modelo.
 
 Decidi criar uma especialização para cada tipo de frete. Deixo a responsabilidade de aceitar (ou não) fazer o cálculo do frete para algum especialista no assunto.
 
----
+{% highlight javascript %}
 function TipoMotoFrete(){
   this.distanciaMaximaAtendida = 50;
   this.pesoMaximoAtendido = 30;
@@ -103,11 +102,10 @@ function TipoMotoFrete(){
    return .70;
   };
 }
----
 
 Abaixo mais um tipo de frete
 
----
+{% highlight javascript %}
 function TipoCorreioFrete(){
   this.pesoMaximoAtendido = 30;
   this.podeAtenderEsseFrete = function(){
@@ -120,13 +118,12 @@ function TipoCorreioFrete(){
    return .65;
   };
 }
----
 
 A distância não é importante para os "Correios" pois eles entregam em qualquer lugar do mundo! teoricamente.
 
 Vou omitir a criação de todos os tipos de frete necessários para que otimizar o texto.
 
----
+{% highlight javascript %}
 //Essa é a abstração para tipos de frete
 function FornecedorFrete(distancia,peso){
  if (this.constructor === FornecedorFrete) { 
@@ -151,11 +148,10 @@ function FornecedorFrete(distancia,peso){
    return  _custoPeso+_custoDistancia;
  };
 };
----
 
 Chegou o momento de colocar gerência na coisa toda. Vamos implementar um cara que seja responsável por dividir o trabalho entre todos os fornecedores de frete.
 
----
+{% highlight javascript %}
 function CalculadoraFrete(distancia,peso){
  var _fornecedoresFrete = [];
  var _fretesEncontrados = [];
@@ -173,7 +169,6 @@ function CalculadoraFrete(distancia,peso){
   return _fretesEncontrados[0];
  };
 }
----
 
 Terminado! Agora estamos preparados para receber diferentes tipos de fornecedores de frete e cada um deles decide se calcula o valor.
 
