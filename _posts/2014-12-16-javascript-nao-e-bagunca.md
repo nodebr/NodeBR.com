@@ -61,6 +61,7 @@ function CalculadoraFrete(origem,destino,peso){
   return _valorFrete[0];
  }
 }
+{% endhighlight %}
 
 O código acima apresenta diversos problemas mas quero comentar as deficiências sobre a ótica do "open-closed principle".
 
@@ -82,6 +83,7 @@ describe(‘CalculadoraFrete’, function(){
    assert.equal(_esperado,_resultado);
    })
 })
+{% endhighlight %}
 
 Para manter o foco sobre o assunto "open-closed" não vou copiar os códigos de testes que fiz. Eles realmente me ajudaram a evoluir o modelo.
 
@@ -102,6 +104,7 @@ function TipoMotoFrete(){
    return .70;
   };
 }
+{% endhighlight %}
 
 Abaixo mais um tipo de frete
 
@@ -118,6 +121,7 @@ function TipoCorreioFrete(){
    return .65;
   };
 }
+{% endhighlight %}
 
 A distância não é importante para os "Correios" pois eles entregam em qualquer lugar do mundo! teoricamente.
 
@@ -148,6 +152,7 @@ function FornecedorFrete(distancia,peso){
    return  _custoPeso+_custoDistancia;
  };
 };
+{% endhighlight %}
 
 Chegou o momento de colocar gerência na coisa toda. Vamos implementar um cara que seja responsável por dividir o trabalho entre todos os fornecedores de frete.
 
@@ -169,6 +174,7 @@ function CalculadoraFrete(distancia,peso){
   return _fretesEncontrados[0];
  };
 }
+{% endhighlight %}
 
 Terminado! Agora estamos preparados para receber diferentes tipos de fornecedores de frete e cada um deles decide se calcula o valor.
 
