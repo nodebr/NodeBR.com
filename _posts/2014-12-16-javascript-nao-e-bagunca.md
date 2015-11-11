@@ -16,7 +16,7 @@ plataforma node.js (node.js não é linguagem, ok?), fiquei empolgado com a idé
 
 # “TÁ” FECHADO, MAS "TÁ" ABERTO?
 
-Quero escrever sobre um assunto que gosto muito: [SOLID][http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29]. Começo pela letra O do acrônimo por acreditar ser o de mais fácil implementação, inclusive em códigos existentes. Em linhas gerais o que [Bertrand Meyer][http://en.wikipedia.org/wiki/Bertrand_Meyer] diz sobre o princípio do "aberto-fechado" é o seguinte:
+Quero escrever sobre um assunto que gosto muito: [SOLID](http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29). Começo pela letra O do acrônimo por acreditar ser o de mais fácil implementação, inclusive em códigos existentes. Em linhas gerais o que [Bertrand Meyer](http://en.wikipedia.org/wiki/Bertrand_Meyer) diz sobre o princípio do "aberto-fechado" é o seguinte:
 
 "Uma classe só deve ser modificada quando erros forem encontrados. A classe pode ser estendida, mas nunca modificada."
 
@@ -28,7 +28,7 @@ Acredito que exemplos de códigos sobre projetos factíveis são mais fáceis de
 
 "Nós do grupo Eike Zords queremos construir uma solução inovadora para o setor logístico. Esse produto deverá ser capaz de retornar o menor custo de frete a partir de algumas variáveis: origem, destino e peso da mercadoria. Segundo nosso CEO, este produto já vale 1 bilhão de reais. "
 
-Com o escopo do nosso [MVP][http://en.wikipedia.org/wiki/Minimum_viable_product] definido, chegou a hora de codar.
+Com o escopo do nosso [MVP](http://en.wikipedia.org/wiki/Minimum_viable_product) definido, chegou a hora de codar.
 
 {% highlight javascript %}
 function CalculadoraFrete(origem,destino,peso){
@@ -65,7 +65,7 @@ function CalculadoraFrete(origem,destino,peso){
 
 O código acima apresenta diversos problemas mas quero comentar as deficiências sobre a ótica do "open-closed principle".
 
-Evolução dolorosa: A classe sempre será alterada quando funcionalidades forem adicionadas no produto. É o tipo de código que em pouco tempo ninguém mais quer colocar a mão. Legibilidade: As linhas acima são difíceis de ler, será complicado criar uma [linguagem ubíqua][http://martinfowler.com/bliki/UbiquitousLanguage.html] com o dono do produto. "Véio, põe gordura pra mexer nessa bagaça" será a única técnica de estimativa adequada para tarefas que envolvam mexer no código acima.
+Evolução dolorosa: A classe sempre será alterada quando funcionalidades forem adicionadas no produto. É o tipo de código que em pouco tempo ninguém mais quer colocar a mão. Legibilidade: As linhas acima são difíceis de ler, será complicado criar uma [linguagem ubíqua](http://martinfowler.com/bliki/UbiquitousLanguage.html) com o dono do produto. "Véio, põe gordura pra mexer nessa bagaça" será a única técnica de estimativa adequada para tarefas que envolvam mexer no código acima.
 
 Vamos melhorar a situação desse código? Começar pelos testes é uma técnica poderosa para se encontrar bons designs de objetos.
 
@@ -178,7 +178,7 @@ function CalculadoraFrete(distancia,peso){
 
 Terminado! Agora estamos preparados para receber diferentes tipos de fornecedores de frete e cada um deles decide se calcula o valor.
 
-Pronto? Será que a "FornecedorFrete" não está com muita responsabilidade? Concordam que a forma de calcular o frete presente no método "calculaValorFrete" será alterada? Eu acredito que sim! Porém, quero fazer essa melhoria no momento que conversarmos sobre ["Single responsibility principle”][http://en.wikipedia.org/wiki/Single_responsibility_principle] ou "cada macaco no seu galho".
+Pronto? Será que a "FornecedorFrete" não está com muita responsabilidade? Concordam que a forma de calcular o frete presente no método "calculaValorFrete" será alterada? Eu acredito que sim! Porém, quero fazer essa melhoria no momento que conversarmos sobre ["Single responsibility principle”](http://en.wikipedia.org/wiki/Single_responsibility_principle) ou "cada macaco no seu galho".
 
 # Compartilhar para transformar
 
