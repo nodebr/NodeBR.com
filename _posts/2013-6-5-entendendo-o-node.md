@@ -20,7 +20,7 @@ Quais são alguns exemplos de I/O? Bom... aqui tem um diagrama de uma aplicaçã
 
 Se você não entende todas as diferentes coisas que estão nesse diagrama, fique tranquilo. O ponto é, mostrar um unico nó de processo (o hexagono no meio) pode agir como o corredor entre todos os diferentes pontos finais de I/O (laranja e roxo representam I/O).
 
-Normalmente na construção desses sistemas temas as seguintes situações:
+Normalmente na construção desses sistemas temos as seguintes situações:
 
 - Dificuldade de programar, mas tem um super rendimento com resultados rápidos (igual escrever servidores web do zero em C)
 - Facil de programar mas não é o ideal em relação a velocidade/robustez (semelhando ao caso de tentar o upload de um arquivo de 5GB e o seu servidor quebrar)
